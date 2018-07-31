@@ -57,6 +57,15 @@ table {
   width: 100%;
   height: 100%; }
 
+.header {
+  background-color: #49415C;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 50px; }
+
 section {
   display: flex;
   flex-flow: column nowrap;
@@ -64,7 +73,36 @@ section {
   justify-content: center;
   min-height: 100%; }
 
+.background {
+  position: relative;
+  background-attachment: fixed;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; }
+  .background .add {
+    position: absolute;
+    background-attachment: fixed;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+
 body, html {
+  width: 100%;
+  height: 100%; }
+
+.sections {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+.backgrounds {
+  position: relative;
+  z-index: 0;
   width: 100%;
   height: 100%; }
 

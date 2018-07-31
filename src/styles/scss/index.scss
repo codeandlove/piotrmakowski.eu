@@ -1,9 +1,26 @@
 @import '../../../node_modules/reset-css/sass/_reset.scss';
+@import '_Variables';
 @import '_Root';
 @import '_App';
+@import '_Header';
 @import '_Section';
+@import '_Background';
 
 body, html {
+  width: 100%;
+  height: 100%;
+}
+
+.sections {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.backgrounds {
+  position: relative;
+  z-index: 0;
   width: 100%;
   height: 100%;
 }

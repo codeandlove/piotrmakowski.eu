@@ -1,5 +1,9 @@
+@import '../../../node_modules/reset-css/sass/_reset.scss';
+@import '_Root';
 @import '_App';
+@import '_Section';
 
-body {
-
+body, html {
+  width: 100%;
+  height: 100%;
 }

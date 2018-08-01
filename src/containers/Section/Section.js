@@ -2,7 +2,11 @@ import React from 'react';
 
 const Section = (props) => {
     return (
-        <section>Sekcja {props.name}</section>
+        <section id={props.name} >
+            <div className="container">
+                {props.content}
+            </div>
+        </section>
     )
 };
 

@@ -1,0 +1,76 @@
+.me {
+  .me-person {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    transition: opacity .5s ease 0s;
+
+    &.me-person-0 {
+      background-image: url('/images/me/me_0.png');
+    }
+
+    &.me-person-1 {
+      background-image: url('/images/me/me_1.png');
+    }
+
+    &.me-person-2 {
+      background-image: url('/images/me/me_2.png');
+    }
+
+    &.me-person-0,
+    &.me-person-1,
+    &.me-person-2 {
+      opacity: 0;
+    }
+  }
+
+  &.me-interval-0 {
+    .me-person-0 {
+      opacity: 1;
+    }
+
+    .me-person-1 {
+      opacity: 0;
+      transition: opacity 1s ease .25s;
+    }
+
+    .me-person-2 {
+      opacity: 0;
+      transition: opacity 1s ease .25s;
+    }
+  }
+
+  &.me-interval-1 {
+    .me-person-0 {
+      opacity: 0;
+      transition: opacity 1s ease .25s;
+    }
+
+    .me-person-1 {
+      opacity: 1;
+    }
+
+    .me-person-2 {
+      opacity: 0;
+      transition: opacity 1s ease .25s;
+    }
+  }
+
+  &.me-interval-2 {
+    .me-person-0 {
+      opacity: 0;
+      transition: opacity 1s ease .25s;
+    }
+
+    .me-person-1 {
+      opacity: 0;
+      transition: opacity 1s ease .25s;
+    }
+
+    .me-person-2 {
+      opacity: 1;
+    }
+  }
+}

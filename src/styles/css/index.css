@@ -90,6 +90,46 @@ section {
     bottom: 0;
     left: 0; }
 
+.me .me-person {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition: opacity .5s ease 0s; }
+  .me .me-person.me-person-0 {
+    background-image: url("/images/me/me_0.png"); }
+  .me .me-person.me-person-1 {
+    background-image: url("/images/me/me_1.png"); }
+  .me .me-person.me-person-2 {
+    background-image: url("/images/me/me_2.png"); }
+  .me .me-person.me-person-0, .me .me-person.me-person-1, .me .me-person.me-person-2 {
+    opacity: 0; }
+.me.me-interval-0 .me-person-0 {
+  opacity: 1; }
+.me.me-interval-0 .me-person-1 {
+  opacity: 0;
+  transition: opacity 1s ease .25s; }
+.me.me-interval-0 .me-person-2 {
+  opacity: 0;
+  transition: opacity 1s ease .25s; }
+.me.me-interval-1 .me-person-0 {
+  opacity: 0;
+  transition: opacity 1s ease .25s; }
+.me.me-interval-1 .me-person-1 {
+  opacity: 1; }
+.me.me-interval-1 .me-person-2 {
+  opacity: 0;
+  transition: opacity 1s ease .25s; }
+.me.me-interval-2 .me-person-0 {
+  opacity: 0;
+  transition: opacity 1s ease .25s; }
+.me.me-interval-2 .me-person-1 {
+  opacity: 0;
+  transition: opacity 1s ease .25s; }
+.me.me-interval-2 .me-person-2 {
+  opacity: 1; }
+
 body, html {
   width: 100%;
   height: 100%; }
@@ -98,12 +138,18 @@ body, html {
   position: absolute;
   width: 100%;
   height: 100%;
-  z-index: 1; }
+  z-index: 2; }
 
 .backgrounds {
   position: relative;
   z-index: 0;
   width: 100%;
   height: 100%; }
+
+.me-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
 
 /*# sourceMappingURL=index.css.map */

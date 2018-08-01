@@ -3,6 +3,9 @@ import React, { Component } from 'react';
 import Header from './containers/Header/Header';
 import Section from './containers/Section/Section';
 import Background from './containers/Background/Background';
+import Me from './containers/Me/Me';
+
+import Start from './contents/Start/Start';
 
 class App extends Component {
   render() {
@@ -10,11 +13,14 @@ class App extends Component {
       <div className="app">
           <Header />
           <div className="sections">
-              <Section name="start" />
+              <Section name="start" content={<Start />} />
               <Section name="timeline" />
               <Section name="bio" />
               <Section name="portfolio" />
               <Section name="contact" />
+          </div>
+          <div className="me-wrapper">
+              <Me />
           </div>
           <div className="backgrounds">
               <Background image="./images/backgrounds/section_00.jpg" />

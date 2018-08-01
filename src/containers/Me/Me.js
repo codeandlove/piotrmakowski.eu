@@ -37,9 +37,14 @@ class Me extends Component {
 
     render() {
         const {persons, interval} = this.state;
+        const {mouse} = this.props;
+
+        const style = {
+            transform:  `translate(${mouse.x}%, ${mouse.y}%)`
+        };
 
         return (
-            <div className={`me me-interval-${interval}`}>
+            <div className={`me me-interval-${interval}`} style={style}>
                 {
                     [...Array(persons)].map((x, i) => {
                         return (

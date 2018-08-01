@@ -1,11 +1,17 @@
 .me {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
   .me-person {
     position: absolute;
     width: 100%;
     height: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
-    transition: opacity .5s ease 0s;
+    transition: all .5s ease 0s;
 
     &.me-person-0 {
       background-image: url('/images/me/me_0.png');
@@ -33,19 +39,19 @@
 
     .me-person-1 {
       opacity: 0;
-      transition: opacity 1s ease .25s;
+      transition: all 1s ease .25s;
     }
 
     .me-person-2 {
       opacity: 0;
-      transition: opacity 1s ease .25s;
+      transition: all 1s ease .25s;
     }
   }
 
   &.me-interval-1 {
     .me-person-0 {
       opacity: 0;
-      transition: opacity 1s ease .25s;
+      transition: all 1s ease .25s;
     }
 
     .me-person-1 {
@@ -54,19 +60,19 @@
 
     .me-person-2 {
       opacity: 0;
-      transition: opacity 1s ease .25s;
+      transition: all 1s ease .25s;
     }
   }
 
   &.me-interval-2 {
     .me-person-0 {
       opacity: 0;
-      transition: opacity 1s ease .25s;
+      transition: all 1s ease .25s;
     }
 
     .me-person-1 {
       opacity: 0;
-      transition: opacity 1s ease .25s;
+      transition: all 1s ease .25s;
     }
 
     .me-person-2 {

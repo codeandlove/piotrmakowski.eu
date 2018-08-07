@@ -1,0 +1,66 @@
+.navigation {
+  .burger {
+    position: absolute;
+    padding: 25px;
+    right: 0;
+
+    @include media('>tablet') {
+      display: none;
+    }
+  }
+
+  ul {
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
+    @include media('<=tablet') {
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      height: 100%;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -9;
+    }
+
+    li {
+      height: inherit;
+      line-height: inherit;
+
+      @include media('<=tablet') {
+        height: 50px;
+        line-height: normal;
+      }
+
+      > a {
+        cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 300;
+        height: inherit;
+        display: block;
+        color: white;
+        padding: 0 15px;
+        text-decoration: none;
+        line-height: inherit;
+        letter-spacing: .1em;
+        background-image: linear-gradient(darken($cta, 10%), darken($cta, 10%) 50%, $cta 50%, $cta);
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+        background-size: 100% 200%;
+        transition: all .3s ease 0s;
+
+        &:hover {
+          background-position: 0 0;
+          background-color: #1b1725;
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 
 import Link from './../../components/Link/Link';
+import Burger from './../Burger/Burger';
 
 class Navigation extends Component {
     render() {
         return (
             <nav className="navigation">
+                <Burger />
                 <ul>
                     <li>
                         <Link url="start" label="Start" />

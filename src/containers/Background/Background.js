@@ -5,7 +5,7 @@ const Background = (props) => {
     const style = {backgroundImage: `url(${props.image})`};
     const styleAdd = {
         backgroundImage: `url(${props.add})`,
-        backgroundPosition: `${50 - props.mouse.x}% ${50 - props.mouse.y}%`
+        backgroundPosition: `${50 + props.mouse.x}% ${50 + props.mouse.y}%`
     };
 
     return (

@@ -1,0 +1,23 @@
+.logo {
+  width: 80px;
+  background-color: $cta;
+  position: relative;
+  left: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all .3s ease 0s;
+
+  &:hover {
+    background-color: darken($cta, 10%);
+    width: 100px;
+    left: -10px;
+  }
+
+  .logo-wrapper {
+    display: block;
+
+    .logo-img {
+      max-width: 100%;
+    }
+  }
+}

@@ -28,9 +28,12 @@ class MouseMovement extends Component {
 
         const {factorX, factorY} = this.props;
 
+        let x = e.clientX - (window.innerWidth / 2);
+        let y = e.clientY - (window.innerHeight / 2);
+
         const movement = {
-            x: ((e.screenX / window.innerWidth) -.5) * (factorX || dFactorX),
-            y: ((e.screenY / window.innerHeight) -.5) * (factorY || dFactorY)
+            x: (x/window.innerWidth) * (factorX || dFactorX),
+            y: (y/window.innerHeight) * (factorY || dFactorY)
         };
 
         this.setState({

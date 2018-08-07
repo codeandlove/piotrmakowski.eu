@@ -1,4 +1,9 @@
 @import '../../../node_modules/reset-css/sass/_reset.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+@import 'helpers/_mixins';
+
 @import '_Variables';
 @import '_Root';
 @import '_App';
@@ -6,8 +11,13 @@
 @import '_Section';
 @import '_Background';
 @import '_Me';
+@import '_Logo';
+@import '_Navigation';
+@import '_Burger';
 
 body, html {
+  font-family: 'Open Sans', sans-serif;
+  background-color: $cta;
   width: 100%;
   height: 100%;
 }
@@ -24,6 +34,9 @@ body, html {
   z-index: 0;
   width: 100%;
   height: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  transition: all .5s ease 0s;
 }
 
 .me-wrapper {
@@ -31,4 +44,22 @@ body, html {
   width: 100%;
   height: 100%;
   z-index: 1;
+  transition: all .5s ease 0s;
+}
+
+.on {
+  .backgrounds {
+    transform-origin: 0 100%;
+    transform: rotateY(90deg) translate3d(0, 0, 0);
+  }
+
+  .me-wrapper {
+    transform-origin: 0 100%;
+    transform: rotateY(90deg) translate3d(0, 0, 50px);
+  }
+}
+
+%rotate-transform-on {
+  transform-origin: 0 100%;
+  transform: rotateY(90deg);
 }

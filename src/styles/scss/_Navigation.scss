@@ -18,15 +18,15 @@
 
     @include media('<=tablet') {
       flex-flow: column nowrap;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
       position: fixed;
       height: 100%;
       right: 0;
       top: 0;
       bottom: 0;
-      left: 0;
       z-index: -9;
+      transition: all .5s ease 0s;
     }
 
     li {
@@ -36,6 +36,7 @@
       @include media('<=tablet') {
         height: 50px;
         line-height: normal;
+        width: 100%;
       }
 
       > a {
@@ -58,8 +59,32 @@
         &:hover {
           background-position: 0 0;
           background-color: #1b1725;
-          color: #fff !important;
+          color: white;
         }
+      }
+
+      &.active {
+        > a {
+          background-position: 0 0;
+          background: white;
+          color: $cta;
+        }
+      }
+    }
+  }
+
+  &.nav-is-closed {
+    @include media('<=tablet') {
+      > ul {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  &.nav-is-open {
+    @include media('<=tablet') {
+      > ul {
+        transform: translateX(0);
       }
     }
   }

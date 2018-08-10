@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from './../Navigation/Navigation';
 import Logo from './../Logo/Logo';
 
-const Header = (props) => {
+const Header = () => {
 
     return (
         <header className="header">

@@ -11,9 +11,10 @@ $b__spacing: 8px;
   background: transparent;
   cursor: pointer;
   transition: all 500ms ease 0ms;
-  border: 0 none;
+  border: 0;
   box-shadow: 0 0 0 0;
   z-index: 999;
+  border-radius: 0;
 
   &:hover {
     transform: none;
@@ -42,7 +43,6 @@ $b__spacing: 8px;
       width: 100%;
       position: absolute;
       transform-origin: 100% 50% 0;
-      border-radius: 2px;
     }
 
     &:before {

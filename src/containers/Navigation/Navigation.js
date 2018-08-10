@@ -1,33 +1,57 @@
-import React, { Component } from 'react';
+import React from 'react';
+
+import {withContext} from './../../Context';
 
 import Link from './../../components/Link/Link';
 import Burger from './../Burger/Burger';
 
-class Navigation extends Component {
-    render() {
-        return (
-            <nav className="navigation">
-                <Burger />
-                <ul>
-                    <li>
-                        <Link url="start" label="Start" />
-                    </li>
-                    <li>
-                        <Link url="timeline" label="Timeline" />
-                    </li>
-                    <li>
-                        <Link url="bio" label="Bio" />
-                    </li>
-                    <li>
-                        <Link url="portfolio" label="Portfolio" />
-                    </li>
-                    <li>
-                        <Link url="contact" label="Contact" />
-                    </li>
-                </ul>
-            </nav>
-        );
-    }
-}
+const Navigation = props => {
 
-export default Navigation;
+    let navElements = [
+        {
+            url: 'start',
+            label: 'Start',
+            class: `${(props.activeNav === 0) ? 'active': ''}`
+        },
+        {
+            url: 'timeline',
+            label: 'Timeline',
+            class: `${(props.activeNav === 1) ? 'active': ''}`
+        },
+        {
+            url: 'bio',
+            label: 'Bio',
+            class: `${(props.activeNav === 2) ? 'active': ''}`
+        },
+        {
+            url: 'portfolio',
+            label: 'Portfolio',
+            class: `${(props.activeNav === 3) ? 'active': ''}`
+        },
+        {
+            url: 'contact',
+            label: 'Contact',
+            class: `${(props.activeNav === 4) ? 'active': ''}`
+        },
+    ];
+
+    return (
+        <nav className={`navigation ${props.navigationIsOpened ? 'nav-is-opened' : 'nav-is-closed'}`}>
+            <Burger />
+            <ul>
+
+                {
+                    navElements.map((item, key) => {
+                        return (
+                            <li key={`NavItem-${key}`} className={item.class} onClick={() => props.updateNavItem(key)}>
+                                <Link url={item.url} label={item.label} />
+                            </li>
+                        );
+                    })
+                }
+            </ul>
+        </nav>
+    );
+};
+
+export default withContext(Navigation);

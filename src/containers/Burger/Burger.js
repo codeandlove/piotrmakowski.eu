@@ -1,18 +1,10 @@
 import React from 'react';
 
-import {AppContext} from "../../Context";
+import {withContext} from "../../Context";
 
-const Burger = () => {
+const Burger = (props) => {
     return (
-        <AppContext.Consumer>
-            {
-                context => {
-                    return (
-                        <button className={`burger ${context.state.navigationIsOpened ? 'is-opened': 'is-closed'}`} onClick={context.toggleNavigation}><span></span></button>
-                    )
-                }
-            }
-        </AppContext.Consumer>
+        <button className={`burger ${props.navigationIsOpened ? 'nav-is-opened on' : 'nav-is-closed off'}`} onClick={props.toggleNavigation}><span></span></button>
     );
 };
-export default Burger;
+export default withContext(Burger);

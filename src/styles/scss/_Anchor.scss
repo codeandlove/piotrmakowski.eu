@@ -1,0 +1,51 @@
+.anchor-effect{
+    display: inline;
+
+    > a {
+        cursor: pointer;
+        perspective: 1000px;
+        color: darken($cta-secondary, 25%);
+        overflow: hidden;
+
+        > span {
+            background-color: $cta-secondary;
+            display: inline-block;
+            padding: 0 5px;
+            line-height: 24px;
+            position: relative;
+            transition: transform .3s ease 0s;
+            transform-origin: 50% 0;
+            transform-style: preserve-3d;
+
+            &:before {
+                background-color: $cta-secondary;
+                content: attr(data-hover);
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                text-align: center;
+                transition: background .3s ease 0s;
+                transform: rotateX(90deg);
+                transform-origin: 50% 0;
+            }
+
+            &:hover,
+            &:focus {
+                transform: rotateX(-90deg) translateY(-50%);
+            }
+        }
+
+        &:hover,
+        &:focus {
+            transform: rotateX(-90deg) translateY(-50%);
+
+            > span {
+                &:before {
+                    background-color: lighten($cta-secondary, 25%);
+                }
+            }
+        }
+    }
+}

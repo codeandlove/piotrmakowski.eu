@@ -10,6 +10,7 @@
   }
 
   ul {
+    list-style: none;
     height: 50px;
     line-height: 50px;
     display: flex;
@@ -32,6 +33,7 @@
     li {
       height: inherit;
       line-height: inherit;
+      margin: 0;
 
       @include media('<=tablet') {
         height: 50px;
@@ -50,7 +52,7 @@
         text-decoration: none;
         line-height: inherit;
         letter-spacing: .1em;
-        background-image: linear-gradient(darken($cta, 10%), darken($cta, 10%) 50%, $cta 50%, $cta);
+        background-image: linear-gradient(darken($cta-primary, 10%), darken($cta-primary, 10%) 50%, $cta-primary 50%, $cta-primary);
         background-position: 0 100%;
         background-repeat: repeat-x;
         background-size: 100% 200%;
@@ -67,7 +69,7 @@
         > a {
           background-position: 0 0;
           background: white;
-          color: $cta;
+          color: $cta-primary;
         }
       }
     }

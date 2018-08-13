@@ -1,0 +1,87 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: $text-color;
+  background-color: $cta-primary;
+  line-height: normal;
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizelegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  outline: 0;
+
+  &:after,
+  &:before {
+    outline: 0;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+a {
+  color: $cta-primary;
+  transition: color .3s ease 0s;
+  text-decoration: none;
+
+  &:hover {
+    color: $cta-secondary;
+  }
+}
+
+strong {
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 15px;
+}
+
+h1 {
+  font-size: 44px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 15px;
+
+  &:last-of-type {
+    margin: 0;
+  }
+}
+
+ul {
+  margin: 0 0 15px;
+  list-style: outside;
+  padding-left: 30px;
+
+  > li {
+    margin: 0 0 10px;
+  }
+}
+
+.hand-written {
+  font-family: 'Kalam', cursive;
+}

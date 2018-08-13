@@ -5,6 +5,11 @@
   right: 0;
   bottom: 0;
 
+  .me-wrapper {
+    width: 100%;
+    height: 100%;
+  }
+
   .me-person {
     position: absolute;
     width: 100%;
@@ -12,6 +17,10 @@
     background-repeat: no-repeat;
     background-position: center bottom;
     transition: all .5s ease 0s;
+
+    @include media('<=desktop') {
+      background-size: auto 80%;
+    }
 
     &.me-person-0 {
       background-image: url('/images/me/me_0.png');
@@ -32,7 +41,12 @@
     }
   }
 
-  &.me-interval-0 {
+  .me-layer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .me-interval-0 {
     .me-person-0 {
       opacity: 1;
     }
@@ -48,7 +62,7 @@
     }
   }
 
-  &.me-interval-1 {
+  .me-interval-1 {
     .me-person-0 {
       opacity: 0;
       transition: all 1s ease .25s;
@@ -64,7 +78,7 @@
     }
   }
 
-  &.me-interval-2 {
+  .me-interval-2 {
     .me-person-0 {
       opacity: 0;
       transition: all 1s ease .25s;

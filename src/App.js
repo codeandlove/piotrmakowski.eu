@@ -24,10 +24,12 @@ const App = props => {
                 <Section name="portfolio" />
                 <Section name="contact" />
             </div>
-            <div className="me-wrapper">
-                <MouseMovement factorX={2} factorY={2}>
-                    <Me />
-                </MouseMovement>
+            <div className="me">
+                <div className="me-wrapper">
+                    <MouseMovement factorX={2} factorY={2}>
+                        <Me />
+                    </MouseMovement>
+                </div>
             </div>
             <div className="backgrounds">
                 <MouseMovement factorX={20} factorY={10}>

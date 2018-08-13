@@ -44,7 +44,7 @@ class Me extends Component {
         };
 
         return (
-            <div className={`me me-interval-${interval}`} style={style}>
+            <div className={`me-layer me-interval-${interval}`} style={style}>
                 {
                     [...Array(persons)].map((x, i) => {
                         return (

@@ -1,10 +1,16 @@
 @import '../../../node_modules/reset-css/sass/_reset.scss';
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-
-@import 'helpers/_mixins';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Kalam|Material+Icons');
 
 @import '_Variables';
+
+@import 'helpers/_mixins';
+@import 'helpers/_typhography';
+@import 'helpers/_container';
+@import 'helpers/_button';
+@import 'helpers/_columns';
+@import 'helpers/_panel';
+
 @import '_Root';
 @import '_App';
 @import '_Header';
@@ -13,11 +19,10 @@
 @import '_Me';
 @import '_Logo';
 @import '_Navigation';
+@import '_Anchor';
 @import '_Burger';
 
 body, html {
-  font-family: 'Open Sans', sans-serif;
-  background-color: $cta;
   width: 100%;
   height: 100%;
 }
@@ -50,7 +55,7 @@ body, html {
   }
 }
 
-.me-wrapper {
+.me {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -64,8 +69,8 @@ body, html {
 
 .nav-is-closed {
   > .sections,
-  > .backgrounds
-  > .me-wrapper {
+  > .backgrounds,
+  > .me {
     > * {
       transform: rotateY(0deg);
     }
@@ -75,9 +80,9 @@ body, html {
 .nav-is-opened {
   > .sections,
   > .backgrounds,
-  > .me-wrapper {
+  > .me {
     > * {
-      transform: rotateY(60deg);
+      transform: rotateY(75deg);
     }
   }
 }

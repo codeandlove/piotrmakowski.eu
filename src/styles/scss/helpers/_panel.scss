@@ -1,0 +1,32 @@
+.panel {
+  width: 100%;
+  margin-bottom: 15px;
+  max-width: 460px;
+
+  .panel-header {
+    color: $cta-primary;
+    padding: 15px 0;
+    border-bottom: 1px dashed rgba($cta-primary, .25);
+
+    &.no-border {
+      border: 0;
+    }
+  }
+
+  .panel-content {
+
+    .panel-actions {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+
+      &.justify-right {
+        justify-content: flex-end;
+      }
+
+      &.justify-left {
+        justify-content: flex-start;
+      }
+    }
+  }
+}

@@ -1,19 +1,25 @@
 .panel {
+  background-color: rgba(white, .8);
   width: 100%;
   margin-bottom: 15px;
   max-width: 460px;
 
   .panel-header {
+    padding: 15px;
     color: $cta-primary;
-    padding: 15px 0;
     border-bottom: 1px dashed rgba($cta-primary, .25);
 
     &.no-border {
       border: 0;
     }
+
+    +.panel-content {
+      padding: 0 15px 15px;
+    }
   }
 
   .panel-content {
+    padding: 15px;
 
     .panel-actions {
       display: flex;

@@ -11,6 +11,7 @@ import MouseMovement from './components/MouseMovement/MouseMovement';
 
 import Start from './contents/Start/Start';
 import Timeline from './contents/Timeline/Timeline';
+import Bio from './contents/Bio/Bio';
 
 const App = props => {
 
@@ -20,7 +21,7 @@ const App = props => {
             <div className="sections">
                 <Section name="start" content={<Start />} />
                 <Section name="timeline" content={<Timeline />} />
-                <Section name="bio" />
+                <Section name="bio" content={<Bio />} />
                 <Section name="portfolio" />
                 <Section name="contact" />
             </div>

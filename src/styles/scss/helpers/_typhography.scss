@@ -70,6 +70,10 @@ p {
   &:last-of-type {
     margin: 0;
   }
+
+  > .material-icons {
+    vertical-align: text-top;
+  }
 }
 
 ul {

@@ -4,10 +4,23 @@
   justify-content: space-between;
   align-items: flex-start;
 
+  @include media('<=tablet') {
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
   .column {
     flex: 1;
     display: flex;
     flex-flow: column nowrap;
+
+    @include media('>tablet') {
+      margin-right: 15px;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
 
     &.align-left {
       align-items: flex-start;

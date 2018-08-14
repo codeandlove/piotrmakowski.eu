@@ -101,6 +101,8 @@ p {
   margin: 0 0 15px; }
   p:last-of-type {
     margin: 0; }
+  p > .material-icons {
+    vertical-align: text-top; }
 
 ul {
   margin: 0 0 15px;
@@ -148,33 +150,47 @@ button {
   flex-flow: row nowrap;
   justify-content: space-between;
   align-items: flex-start; }
+  @media (max-width: 768px) {
+    .columns {
+      flex-flow: column nowrap;
+      align-items: center; } }
   .columns .column {
     flex: 1;
     display: flex;
     flex-flow: column nowrap; }
+    @media (min-width: 769px) {
+      .columns .column {
+        margin-right: 15px; }
+        .columns .column:last-of-type {
+          margin-right: 0; } }
     .columns .column.align-left {
       align-items: flex-start; }
     .columns .column.align-right {
       align-items: flex-end; }
 
 .panel {
+  background-color: rgba(255, 255, 255, 0.8);
   width: 100%;
   margin-bottom: 15px;
   max-width: 460px; }
   .panel .panel-header {
+    padding: 15px;
     color: #49415C;
-    padding: 15px 0;
     border-bottom: 1px dashed rgba(73, 65, 92, 0.25); }
     .panel .panel-header.no-border {
       border: 0; }
-  .panel .panel-content .panel-actions {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between; }
-    .panel .panel-content .panel-actions.justify-right {
-      justify-content: flex-end; }
-    .panel .panel-content .panel-actions.justify-left {
-      justify-content: flex-start; }
+    .panel .panel-header + .panel-content {
+      padding: 0 15px 15px; }
+  .panel .panel-content {
+    padding: 15px; }
+    .panel .panel-content .panel-actions {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between; }
+      .panel .panel-content .panel-actions.justify-right {
+        justify-content: flex-end; }
+      .panel .panel-content .panel-actions.justify-left {
+        justify-content: flex-start; }
 
 #root {
   width: 100%;

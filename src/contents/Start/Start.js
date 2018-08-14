@@ -5,10 +5,9 @@ import AnchorLink from './../../components/Anchor/Anchor';
 const Start = (props) => {
     return (
         <div className="container">
-
             <div className="columns">
                 <div className="column align-left column-introduction">
-                    <div className="panel">
+                    <div className="panel no-bg">
                         <h1 className="panel-header">
                             <span className="hand-written">
                                 Piotr Makowski
@@ -27,7 +26,7 @@ const Start = (props) => {
                         </div>
                     </div>
 
-                    <div className="panel">
+                    <div className="panel no-bg">
                         <h3 className="panel-header">
                             Portfolio & Curriculum Vitae
                         </h3>
@@ -48,7 +47,7 @@ const Start = (props) => {
                 </div>
 
                 <div className="column align-right column-exercises">
-                    <div className="panel">
+                    <div className="panel no-bg">
                         <h2 className="panel-header no-border">
                             <span className="hand-written">
                                 Frontend Developer
@@ -60,7 +59,7 @@ const Start = (props) => {
                         </h2>
                     </div>
 
-                    <div className="panel">
+                    <div className="panel no-bg">
                         <h3 className="panel-header">
                             Work expertise
                         </h3>

@@ -4,6 +4,7 @@ const data = [
     {
         year: '2004 - 2006',
         icon: 'games',
+        icon_alt: 'Gry i aplikacje',
         title: 'Kooperacja z lokalnym portalem społecznościowym <b>dlaStudenta.pl</b>',
         content: (
             <ul>
@@ -17,6 +18,7 @@ const data = [
     {
         year: '2006 - 2007',
         icon: 'games',
+        icon_alt: 'Gry i aplikacje',
         title: 'Projektant/Grafik w <b>Qubic Games</b> mobile game entertainment',
         content: (
             <ul>
@@ -28,6 +30,7 @@ const data = [
     {
         year: '2007 - 2010',
         icon: 'games',
+        icon_alt: 'Gry i aplikacje',
         title: 'Projektant gier/Grafik w <b>XOFTO</b> mobile game entertainment',
         content: (
             <ul>
@@ -39,6 +42,7 @@ const data = [
     {
         year: '2010 - 2011',
         icon: 'games',
+        icon_alt: 'Gry i aplikacje',
         title: 'Projektant gier/Grafik w <b>E-MUZYKA S.A.</b>',
         content: (
             <ul>
@@ -50,7 +54,8 @@ const data = [
     },
     {
         year: '2011 - 2014',
-        icon: 'games',
+        icon: 'agency',
+        icon_alt: 'Gry i aplikacje',
         title: 'CEO Agencji Kreatywnej <b>Codeandlove.com</b>, freelancer',
         content: (
             <ul>
@@ -63,7 +68,8 @@ const data = [
     },
     {
         year: '2014 - 2018',
-        icon: 'games',
+        icon: 'agency',
+        icon_alt: 'Gry i aplikacje',
         title: 'Kontrakt z firmą <b>Virtua LTD</b>, Senior Frontend Developer, Magento developer',
         content: (
             <ul>
@@ -75,7 +81,8 @@ const data = [
     },
     {
         year: '2018 - ∞',
-        icon: 'games',
+        icon: 'personal',
+        icon_alt: 'Gry i aplikacje',
         title: 'Otwarty na współpracę z Państwa firmą',
         content: (
             <ul>
@@ -87,10 +94,24 @@ const data = [
     }
 ];
 
+const TimelineBlock = props => {
+    return (
+        <div className="timeline-block">
+            <div className={`timeline-icon icon-${props.icon}`}>
+                <img src={`images/icons/${props.icon}_icon.svg`} alt={props.icon_alt} />
+            </div>
+        </div>
+    );
+}
+
 const Timeline = props => {
     return (
-        <div>
-
+        <div className="timeline">
+            {
+                data.map((props, key) => {
+                    return <TimelineBlock {...props} />
+                })
+            }
         </div>
     )
 };

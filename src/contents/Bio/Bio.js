@@ -45,7 +45,7 @@ const Bio = (props) => {
                         </h3>
                         <div className="panel-content">
                             <p>
-                                <i class="material-icons">videogame_asset</i> Video Games, Computers, Astronomy Science
+                                <i className="material-icons">videogame_asset</i> Video Games, Computers, Astronomy Science
                             </p>
                         </div>
                     </div>

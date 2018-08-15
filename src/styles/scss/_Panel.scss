@@ -13,6 +13,10 @@
       border: 0;
     }
 
+    &.no-margin {
+      margin: 0;
+    }
+
     +.panel-content {
       padding: 0 15px 15px;
     }
@@ -34,5 +38,9 @@
         justify-content: flex-start;
       }
     }
+  }
+
+  &.no-bg {
+    background-color: transparent;
   }
 }

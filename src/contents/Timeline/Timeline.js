@@ -1,25 +1,26 @@
 import React from 'react';
+import renderHTML from 'react-render-html';
+import Panel from './../../components/Panel/Panel';
 
 const data = [
     {
         year: '2004 - 2006',
-        icon: 'games',
-        icon_alt: 'Gry i aplikacje',
-        title: 'Kooperacja z lokalnym portalem społecznościowym <b>dlaStudenta.pl</b>',
+        icon: 'agency',
+        icon_alt: 'Freelance creative works',
+        title: 'Cooperation with local social portal for students <strong>dlaStudenta.pl</strong>',
         content: (
             <ul>
-                <li>webdesign</li>
-                <li>Projektowanie reklamy (flash, DTP)</li>
-                <li>marketing consulting</li>
+                <li>Webdesign</li>
+                <li>ADV design (flash, DTP)</li>
+                <li>Marketing consulting</li>
             </ul>
         )
     },
-
     {
         year: '2006 - 2007',
         icon: 'games',
-        icon_alt: 'Gry i aplikacje',
-        title: 'Projektant/Grafik w <b>Qubic Games</b> mobile game entertainment',
+        icon_alt: 'Games and apps',
+        title: 'Graphic designer and inventor in <strong>Qubic Games</strong> studio - mobile game entertainment',
         content: (
             <ul>
                 <li>Projektant brandowych gier mobilnych i aplikacji</li>
@@ -31,7 +32,7 @@ const data = [
         year: '2007 - 2010',
         icon: 'games',
         icon_alt: 'Gry i aplikacje',
-        title: 'Projektant gier/Grafik w <b>XOFTO</b> mobile game entertainment',
+        title: 'Projektant gier/Grafik w <strong>XOFTO</strong> mobile game entertainment',
         content: (
             <ul>
                 <li>Projektant brandowych gier mobilnych i aplikacji</li>
@@ -43,7 +44,7 @@ const data = [
         year: '2010 - 2011',
         icon: 'games',
         icon_alt: 'Gry i aplikacje',
-        title: 'Projektant gier/Grafik w <b>E-MUZYKA S.A.</b>',
+        title: 'Projektant gier/Grafik w <strong>E-MUZYKA S.A.</strong>',
         content: (
             <ul>
                 <li>Projektant brandowych gier mobilnych i aplikacji</li>
@@ -56,7 +57,7 @@ const data = [
         year: '2011 - 2014',
         icon: 'agency',
         icon_alt: 'Gry i aplikacje',
-        title: 'CEO Agencji Kreatywnej <b>Codeandlove.com</b>, freelancer',
+        title: 'CEO Agencji Kreatywnej <strong>Codeandlove.com</strong>, freelancer',
         content: (
             <ul>
                 <li>Web design &amp; web development</li>
@@ -70,7 +71,7 @@ const data = [
         year: '2014 - 2018',
         icon: 'agency',
         icon_alt: 'Gry i aplikacje',
-        title: 'Kontrakt z firmą <b>Virtua LTD</b>, Senior Frontend Developer, Magento developer',
+        title: 'Kontrakt z firmą <strong>Virtua LTD</strong>, Senior Frontend Developer, Magento developer',
         content: (
             <ul>
                 <li>Certyfikowany Magento Developer (frontend)</li>
@@ -100,6 +101,16 @@ const TimelineBlock = props => {
             <div className={`timeline-icon icon-${props.icon}`}>
                 <img src={`images/icons/${props.icon}_icon.svg`} alt={props.icon_alt} />
             </div>
+            <div className="timeline-content">
+                <Panel 
+                    header={renderHTML(props.title)}
+                >
+                    {props.content}
+                </Panel>
+            </div>
+            <div className="timeline-date">
+                {props.year}
+            </div>
         </div>
     );
 }
@@ -109,7 +120,7 @@ const Timeline = props => {
         <div className="timeline">
             {
                 data.map((props, key) => {
-                    return <TimelineBlock {...props} />
+                    return <TimelineBlock {...props} key={`timeline-item-${key}`} />
                 })
             }
         </div>

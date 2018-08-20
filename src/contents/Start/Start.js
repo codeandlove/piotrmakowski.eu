@@ -20,7 +20,7 @@ const Start = (props) => {
                             Welcome to my creative Curriculum Vitae page.
                         </p>
                         <p>
-                            I am <strong>Piotr Makowski</strong> and i would like to show You my personal works.
+                            My name is <strong>Piotr Makowski</strong> and I would like to show You my personal works.
                         </p>
                         <p>
                             I was working as the Graphic designer and Web developer until i have become a Frontend Warrior.

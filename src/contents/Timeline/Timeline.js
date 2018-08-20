@@ -76,7 +76,7 @@ const data = [
             <ul>
                 <li>Certyfikowany Magento Developer (frontend)</li>
                 <li>Kreacja i rozbudowa istniejących motywów graficznych dla sklepów opartych o Magetno</li>
-                <li>Kreacja i rozbydowa aplikacji opartych o frameworki reaktywne (React.js, VUE.js, Angular.js, Backbone.js)</li>
+                <li>Kreacja i rozbydowa aplikacji opartych o frameworki reaktywne (React.js, VUE.js, Angular.js)</li>
             </ul>
         )
     },
@@ -97,13 +97,15 @@ const data = [
 
 const TimelineBlock = props => {
     return (
-        <div className="timeline-block">
+        <div className={`timeline-block ${props.orderClass}`}>
             <div className={`timeline-icon icon-${props.icon}`}>
                 <img src={`images/icons/${props.icon}_icon.svg`} alt={props.icon_alt} />
             </div>
             <div className="timeline-content">
-                <Panel 
+                <Panel
+                    classes="shadowed full-bg"
                     header={renderHTML(props.title)}
+                    headerTag="h5"
                 >
                     {props.content}
                 </Panel>
@@ -115,14 +117,21 @@ const TimelineBlock = props => {
     );
 }
 
-const Timeline = props => {
+const Timeline = () => {
     return (
-        <div className="timeline">
-            {
-                data.map((props, key) => {
-                    return <TimelineBlock {...props} key={`timeline-item-${key}`} />
-                })
-            }
+        <div className="container">
+            <h3 className="text-align-center">
+                <span className="hand-written">
+                    The timeline of work practice
+                </span>
+            </h3>
+            <div className="timeline">
+                {
+                    data.map((props, key) => {
+                        return <TimelineBlock {...props} orderClass={(key % 2 ===0)? 'odd' : 'even' } key={`timeline-item-${key}`} />
+                    })
+                }
+            </div>
         </div>
     )
 };

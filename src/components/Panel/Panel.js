@@ -21,6 +21,24 @@ const Panel = props => {
                     {props.header}
                 </h2>
             );
+            case 'h3':
+            return (
+                <h3 className={headerClasses}>
+                    {props.header}
+                </h3>
+            );
+            case 'h4':
+            return (
+                <h4 className={headerClasses}>
+                    {props.header}
+                </h4>
+            );
+            case 'h5':
+            return (
+                <h5 className={headerClasses}>
+                    {props.header}
+                </h5>
+            );
             default:
             return (
                 <h3 className={headerClasses}>

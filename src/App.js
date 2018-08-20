@@ -20,7 +20,7 @@ const App = props => {
             <Header />
             <div className="sections">
                 <Section name="start" content={<Start />} />
-                <Section name="timeline" content={<Timeline />} />
+                <Section name="timeline" classes="white-bg" content={<Timeline />} />
                 <Section name="bio" content={<Bio />} />
                 <Section name="portfolio" />
                 <Section name="contact" />

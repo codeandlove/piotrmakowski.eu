@@ -43,4 +43,12 @@
   &.no-bg {
     background-color: transparent;
   }
+
+  &.shadowed {
+    box-shadow: 0 3px 0px rgba(black, .25);
+  }
+
+  &.full-bg {
+    background-color: white;
+  }
 }

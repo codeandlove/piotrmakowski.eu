@@ -1,18 +1,18 @@
 // Include media npm
 @import '../../../../node_modules/include-media/dist/include-media.scss';
 
-@mixin make-triangle($color, $way: left) {
+@mixin make-triangle($color, $way: left, $size: 20px) {
   @if $way == left {
     width: 0;
     height: 0;
-    border-top: 15px solid transparent;
-    border-left: 20px solid $color;
-    border-bottom: 15px solid transparent;
+    border-top: #{$size - $size/4} solid transparent;
+    border-left: $size solid $color;
+    border-bottom: #{$size - $size/4} solid transparent;
   } @else {
     width: 0;
     height: 0;
-    border-top: 15px solid transparent;
-    border-right: 20px solid $color;
-    border-bottom: 15px solid transparent;
+    border-top: #{$size - $size/4} solid transparent;
+    border-right: $size solid $color;
+    border-bottom: #{$size - $size/4} solid transparent;
   }
 }

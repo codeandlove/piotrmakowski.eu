@@ -3,11 +3,15 @@ section {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
-  min-height: 100%;
+  min-height: 100vh;
   padding: 10% 0;
   box-sizing: border-box;
 
   &.white-bg {
     background-color: rgba(white, .8);
+  }
+
+  .section-wrapper {
+    width: 100%;
   }
 }

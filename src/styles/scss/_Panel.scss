@@ -30,6 +30,14 @@
       flex-flow: row nowrap;
       justify-content: space-between;
 
+      @include media('<mobile') {
+        flex-flow: column nowrap;
+
+        > * {
+          margin: 10px 0;
+        }
+      }
+
       &.justify-right {
         justify-content: flex-end;
       }
@@ -42,6 +50,10 @@
 
   &.no-bg {
     background-color: transparent;
+
+    @include media('<tablet') {
+      background-color: rgba(white, .8);
+    }
   }
 
   &.shadowed {

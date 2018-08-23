@@ -18,10 +18,10 @@ class Link extends Component {
     };
 
     render() {
-        const {url, label} = this.props;
+        const {url, label, icon} = this.props;
 
         return (
-            <a href={url} onClick={this.handleClick}>{label}</a>
+            <a href={url} onClick={this.handleClick}>{icon}{label}</a>
         );
     }
 }

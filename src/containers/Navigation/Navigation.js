@@ -9,30 +9,42 @@ const Navigation = props => {
 
     let navElements = [
         {
+            name: 'start',
             url: 'start',
             label: 'Start',
-            class: `${(props.activeNav === 0) ? 'active': ''}`
+            class: `${(props.activeNav === 'start') ? 'active': ''}`,
+            icon: (<i className="material-icons">home</i>)
         },
         {
+            name: 'timeline',
             url: 'timeline',
             label: 'Timeline',
-            class: `${(props.activeNav === 1) ? 'active': ''}`
+            class: `${(props.activeNav === 'timeline') ? 'active': ''}`
         },
         {
+            name: 'bio',
             url: 'bio',
             label: 'Bio',
-            class: `${(props.activeNav === 2) ? 'active': ''}`
+            class: `${(props.activeNav === 'bio') ? 'active': ''}`
         },
         {
+            name: 'portfolio',
             url: 'portfolio',
             label: 'Portfolio',
-            class: `${(props.activeNav === 3) ? 'active': ''}`
+            class: `${(props.activeNav === 'portfolio') ? 'active': ''}`
         },
         {
+            name: 'future',
+            url: 'future',
+            label: 'Future',
+            class: `${(props.activeNav === 'future') ? 'active': ''}`
+        },
+        {
+            name: 'contact',
             url: 'contact',
             label: 'Contact',
-            class: `${(props.activeNav === 4) ? 'active': ''}`
-        },
+            class: `${(props.activeNav === 'contact') ? 'active': ''}`
+        }
     ];
 
     return (
@@ -43,8 +55,8 @@ const Navigation = props => {
                 {
                     navElements.map((item, key) => {
                         return (
-                            <li key={`NavItem-${key}`} className={item.class} onClick={() => props.updateNavItem(key)}>
-                                <Link url={item.url} label={item.label} />
+                            <li key={`NavItem-${key}`} className={item.class} onClick={() => props.updateNavItem(item.name)}>
+                                <Link url={item.url} label={item.label} icon={item.icon} />
                             </li>
                         );
                     })

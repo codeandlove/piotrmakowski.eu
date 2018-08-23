@@ -9,6 +9,7 @@
     "react-perf-devtool": "^3.0.8",
     "react-render-html": "^0.6.0",
     "react-scripts": "1.1.4",
+    "react-waypoint": "^8.0.3",
     "reset-css": "^4.0.1"
   },
   "scripts": {

@@ -63,6 +63,13 @@
           background-color: #1b1725;
           color: white;
         }
+
+        > i {
+          margin-right: 5px;
+          float: left;
+          line-height: inherit;
+          font-size: 16px;
+        }
       }
 
       &.active {

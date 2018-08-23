@@ -1,22 +1,54 @@
-import React from 'react';
+import React, {Component} from 'react';
+import {withContext} from "../../Context";
 
-const Background = (props) => {
+class Background extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-    const style = {backgroundImage: `url(${props.image})`};
-    const styleAdd = {
-        backgroundImage: `url(${props.add})`,
-        backgroundPosition: `${50 + props.mouse.x}% ${50 + props.mouse.y}%`
-    };
+    render() {
+        const {image, add, mouse, referTo, sectionsData} = this.props;
 
-    return (
-        <div className="background" style={style} >
+        //find refer component
+        const referData = referTo.map(refName => {
+            return sectionsData.filter(item => {
+                if(item.name === refName) {
+                    return item;
+                }
+            });
+        });
+
+        let height = window.innerHeight;
+
+        if(referData[0].length) {
+            height = 0;
+            referData.forEach(item => {
+                if(item.length) {
+                    height += item[0].data.height;
+                }
+            });
+        }
+
+        const style = {
+            backgroundImage: `url(${image})`,
+            height: height
+        };
+
+        const styleAdd = {
+            backgroundImage: `url(${add})`,
+            backgroundPosition: `${50 + mouse.x}% ${50 + mouse.y}%`
+        };
+
+        return (
+            <div className="background" style={style} >
                 {
-                    (props.add) ? (
+                    (add) ? (
                         <div className="add" style={styleAdd} ></div>
                     ) : null
                 }
-        </div>
-    )
-};
+            </div>
+        )
+    }
+}
 
-export default Background;
+export default withContext(Background);

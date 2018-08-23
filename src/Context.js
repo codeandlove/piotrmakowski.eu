@@ -4,8 +4,9 @@ const AppContext = React.createContext();
 
 class Context extends Component {
     state = {
-        activeNav: 0,
-        navigationIsOpened: false
+        activeNav: 'start',
+        navigationIsOpened: false,
+        sectionsData: []
     };
 
     render() {
@@ -19,16 +20,40 @@ class Context extends Component {
                         }
                     })
                 },
-                updateNavItem: i => {
+                updateNavItem: name => {
                     this.setState({
-                        activeNav: i
+                        activeNav: name
+                    })
+                },
+                updateSectionsData: data => {
+                    this.setState(s => {
+
+                        let index = null;
+
+                        s.sectionsData.forEach((sectionItem, i) => {
+                            console.log(sectionItem.name === data.name);
+                            if(sectionItem.name === data.name) {
+                                index = i;
+                            }
+                        });
+
+                        if(index) {
+                            return {
+                                sectionsData: [...s.sectionsData.slice(0, index), data, ...s.sectionsData.slice(index + 1)]
+                            }
+                        } else {
+                            return {
+                                sectionsData: [...s.sectionsData, data]
+                            }
+                        }
+
                     })
                 }
             }}>
                 {this.props.children}
             </AppContext.Provider>
         );
-    }
+    };
 }
 
 export const withContext = (ComposedComponent) => {

@@ -1,4 +1,4 @@
-button {
+button:not(.burger) {
   position: relative;
   cursor: pointer;
   color: white;

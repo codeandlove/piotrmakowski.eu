@@ -13,19 +13,36 @@
   }
 
   .timeline-block {
+    position: relative;
     display: flex;
+
+    @include media('<tablet') {
+      align-items: center;
+    }
 
     &.odd {
       flex-flow: row nowrap;
 
+      @include media('<tablet') {
+        flex-flow: column-reverse nowrap;
+      }
+
       .timeline-content {
         justify-content: flex-end;
+
+        @include media('<tablet') {
+          justify-content: center;
+        }
 
         &:after,
         &:before {
           position: absolute;
           content: '';
           transform: translate(100%, 22px);
+
+          @include media('<tablet') {
+            content: none;
+          }
         }
 
         &:after {
@@ -40,20 +57,44 @@
 
       .timeline-date {
         justify-content: flex-start;
+
+        @include media('<tablet') {
+          background-color: white;
+          margin-top: 50px;
+          margin-bottom: -10px;
+          line-height: normal;
+          padding: 15px;
+          text-align: center;
+          justify-content: center;
+          box-shadow: 0 3px 0 rgba(black, .25);
+          z-index: 1;
+        }
       }
     }
 
     &.even {
       flex-flow: row-reverse nowrap;
 
+      @include media('<tablet') {
+        flex-flow: column-reverse nowrap;
+      }
+
       .timeline-content {
         justify-content: flex-start;
+
+        @include media('<tablet') {
+          justify-content: center;
+        }
 
         &:after,
         &:before {
           position: absolute;
           content: '';
           transform: translate(-100%, 22px);
+
+          @include media('<tablet') {
+            content: none;
+          }
         }
 
         &:after {
@@ -68,6 +109,18 @@
 
       .timeline-date {
         justify-content: flex-end;
+
+        @include media('<tablet') {
+          background-color: white;
+          margin-top: 50px;
+          margin-bottom: -10px;
+          line-height: normal;
+          padding: 15px;
+          text-align: center;
+          justify-content: center;
+          box-shadow: 0 3px 0 rgba(black, .25);
+          z-index: 1;
+        }
       }
     }
 
@@ -75,6 +128,11 @@
       position: absolute;
       left: 50%;
       transform: translate(-50%, 0);
+
+      @include media('<tablet') {
+        top: 0;
+        z-index: 2;
+      }
     }
 
     .timeline-content,
@@ -83,6 +141,11 @@
       flex: 1 0 50%;
       display: flex;
       box-sizing: border-box;
+
+      @include media('<tablet') {
+        padding: 0;
+        flex: none;
+      }
     }
   }
 

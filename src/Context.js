@@ -31,13 +31,12 @@ class Context extends Component {
                         let index = null;
 
                         s.sectionsData.forEach((sectionItem, i) => {
-                            console.log(sectionItem.name === data.name);
                             if(sectionItem.name === data.name) {
                                 index = i;
                             }
                         });
 
-                        if(index) {
+                        if(index !== null) {
                             return {
                                 sectionsData: [...s.sectionsData.slice(0, index), data, ...s.sectionsData.slice(index + 1)]
                             }

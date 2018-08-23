@@ -12,6 +12,7 @@ import MouseMovement from './components/MouseMovement/MouseMovement';
 import Start from './contents/Start/Start';
 import Timeline from './contents/Timeline/Timeline';
 import Bio from './contents/Bio/Bio';
+import Portfolio from './contents/Portfolio/Portfolio';
 
 const App = props => {
 
@@ -23,7 +24,7 @@ const App = props => {
                     <Section name="start" content={<Start />} />
                     <Section name="timeline" classes="white-bg" content={<Timeline />} />
                     <Section name="bio" content={<Bio />} />
-                    <Section name="portfolio" />
+                    <Section name="portfolio" content={<Portfolio />} />
                     <Section name="future" />
                     <Section name="contact" />
                 </div>

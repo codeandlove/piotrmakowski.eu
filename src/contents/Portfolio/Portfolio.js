@@ -5,9 +5,147 @@ const data = [
         title: 'Panoramed',
         name: 'panoramed',
         href: 'panoramed'
-    }
-    /*
-    ,
+    },
+    {
+        title: 'c05m05.com',
+        name: 'c05m05',
+        href: 'c05m05'
+    },
+    {
+        title: 'klubobsesja.pl',
+        name: 'obsesja',
+        href: 'obsesja'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'Panoramed',
+        name: 'panoramed',
+        href: 'panoramed'
+    },
+    {
+        title: 'c05m05.com',
+        name: 'c05m05',
+        href: 'c05m05'
+    },
+    {
+        title: 'klubobsesja.pl',
+        name: 'obsesja',
+        href: 'obsesja'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'Panoramed',
+        name: 'panoramed',
+        href: 'panoramed'
+    },
+    {
+        title: 'c05m05.com',
+        name: 'c05m05',
+        href: 'c05m05'
+    },
+    {
+        title: 'klubobsesja.pl',
+        name: 'obsesja',
+        href: 'obsesja'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'Panoramed',
+        name: 'panoramed',
+        href: 'panoramed'
+    },
+    {
+        title: 'c05m05.com',
+        name: 'c05m05',
+        href: 'c05m05'
+    },
+    {
+        title: 'klubobsesja.pl',
+        name: 'obsesja',
+        href: 'obsesja'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'Panoramed',
+        name: 'panoramed',
+        href: 'panoramed'
+    },
+    {
+        title: 'c05m05.com',
+        name: 'c05m05',
+        href: 'c05m05'
+    },
+    {
+        title: 'klubobsesja.pl',
+        name: 'obsesja',
+        href: 'obsesja'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'Panoramed',
+        name: 'panoramed',
+        href: 'panoramed'
+    },
+    {
+        title: 'c05m05.com',
+        name: 'c05m05',
+        href: 'c05m05'
+    },
+    {
+        title: 'klubobsesja.pl',
+        name: 'obsesja',
+        href: 'obsesja'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'najatkach.pl',
+        name: 'najatkach',
+        href: 'najatkach'
+    },
+    {
+        title: 'Panoramed',
+        name: 'panoramed',
+        href: 'panoramed'
+    },
     {
         title: 'c05m05.com',
         name: 'c05m05',
@@ -23,44 +161,66 @@ const data = [
         name: 'najatkach',
         href: 'najatkach'
     }
-*/
-
 ];
 
 class PortfolioThumb extends Component {
     constructor(props) {
         super(props);
-        console.log(this);
+
+        this.state = {
+            dir: 'from-top'
+        }
     }
 
     componentDidMount() {
-        window.addEventListener('mousemove', this.onMouseMove );
+        this.elm.addEventListener('mousemove', e => this.onMouseMove(e) );
     }
 
     onMouseMove = event => {
-      console.log(event, this);
 
-        if(event.clientX > this.elm.offsetLeft) {
-            console.log('right');
-        } else {
-            console.log('left');
-        }
+        const getDirection = function (ev, obj) {
+            const w = obj.offsetWidth,
+                h = obj.offsetHeight,
+                x = (ev.pageX - obj.offsetLeft - (w / 2) * (w > h ? (h / w) : 1)),
+                y = (ev.pageY - obj.offsetTop - (h / 2) * (h > w ? (w / h) : 1));
 
-        if(event.clientY > this.elm.offsetTop) {
-            console.log('Top');
-        } else {
-            console.log('Bottom');
-        }
+            return Math.round( Math.atan2(y, x) / 1.57079633 + 5 ) % 4;
+        };
+
+        this.setState(s => {
+
+            let tmp = s.dir;
+
+            switch(getDirection(event, this.elm)) {
+                case 0:
+                    tmp = 'from-top';
+                    break;
+                case 1:
+                    tmp = 'from-right';
+                    break;
+                case 2:
+                    tmp = 'from-bottom';
+                    break;
+                case 3:
+                    tmp = 'from-left';
+                    break;
+            }
+
+            return {
+                dir: tmp
+            }
+        })
     };
 
     render() {
         const {name, title, href} = this.props;
+        const {dir} = this.state;
 
         return (
             <div className="portfolio-thumb" ref={elm => this.elm = elm}>
                 <div className="thumb-wrapper">
                     <img src={`images/portfolio/${name}/cover.jpg`} alt={title} />
-                    <div className="thumb-description">
+                    <div className={`thumb-description ${dir}`}>
                         {title}
                     </div>
                 </div>

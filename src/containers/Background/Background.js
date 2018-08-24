@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {withContext} from "../../Context";
 
 const Background = props => {

@@ -3,30 +3,32 @@ import React from 'react';
 import Panel from './../../components/Panel/Panel';
 import AnchorLink from './../../components/Anchor/Anchor';
 
+import ScrollMagicWrapper from './../../components/ScrollMagicWrapper/ScrollMagicWrapper';
+
 const Start = (props) => {
     return (
         <div className="container">
             <div className="columns">
                 <div className="column align-left column-introduction">
-
-                    <Panel classes="no-bg"
-                        header={(
-                            <span className="hand-written">
-                                Piotr Makowski
-                            </span>
-                        )}
-                    >
-                        <p>
-                            Welcome to my creative Curriculum Vitae page.
-                        </p>
-                        <p>
-                            My name is <strong>Piotr Makowski</strong> and I would like to show You my personal works.
-                        </p>
-                        <p>
-                            I was working as the Graphic designer and Web developer until i have become a Frontend Warrior.
-                        </p>
-                    </Panel>
-
+                    <ScrollMagicWrapper>
+                        <Panel classes="no-bg"
+                            header={(
+                                <span className="hand-written">
+                                    Piotr Makowski
+                                </span>
+                            )}
+                        >
+                            <p>
+                                Welcome to my creative Curriculum Vitae page.
+                            </p>
+                            <p>
+                                My name is <strong>Piotr Makowski</strong> and I would like to show You my personal works.
+                            </p>
+                            <p>
+                                I was working as the Graphic designer and Web developer until i have become a Frontend Warrior.
+                            </p>
+                        </Panel>
+                    </ScrollMagicWrapper>
                     <Panel classes="no-bg" header={`Portfolio & Curriculum Vitae`} 
                         actions={[
                             <button key='button-cv'>

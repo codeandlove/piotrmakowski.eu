@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
-import ScrollMagic from 'scrollmagic';
-//import 'scrollmagic/scrollmagic/minified/plugins/animation.gsap.min';
+import ScrollMagic from "./ScrollMagic";
 
 class ScrollMagicWrapper extends Component {
 
@@ -9,11 +8,11 @@ class ScrollMagicWrapper extends Component {
         this.controller = new ScrollMagic.Controller();
 
         this.scene = new ScrollMagic.Scene({
-            duration: 100,
-            offset: 50
+            duration: 1000,
+            offset: 0
         })
-            .setTween("#animate1", 0.5, {backgroundColor: "green", scale: 2.5})
-            .addTo(this.controller);
+        .setTween(this.elm, 25.5, {backgroundColor: "green", scale: .5})
+        .addTo(this.controller);
     }
 
     render () {
@@ -24,31 +23,5 @@ class ScrollMagicWrapper extends Component {
         )
     }
 }
-
-
-//
-// export const withContext = (ComposedComponent) => {
-//
-//     class ContextComponent extends Component {
-//         render(){
-//             return (
-//                 <AppContext.Consumer>
-//                     {
-//                         context => {
-//                             return (
-//                                 <ComposedComponent {...this.props} {...context}>
-//                                     {this.props.children}
-//                                 </ComposedComponent>
-//                             );
-//                         }
-//                     }
-//                 </AppContext.Consumer>
-//             )
-//         }
-//     }
-//
-//     return ContextComponent;
-//
-// };
 
 export default ScrollMagicWrapper;

@@ -1,146 +1,7 @@
 import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 
 const data = [
-    {
-        title: 'Panoramed',
-        name: 'panoramed',
-        href: 'panoramed'
-    },
-    {
-        title: 'c05m05.com',
-        name: 'c05m05',
-        href: 'c05m05'
-    },
-    {
-        title: 'klubobsesja.pl',
-        name: 'obsesja',
-        href: 'obsesja'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'Panoramed',
-        name: 'panoramed',
-        href: 'panoramed'
-    },
-    {
-        title: 'c05m05.com',
-        name: 'c05m05',
-        href: 'c05m05'
-    },
-    {
-        title: 'klubobsesja.pl',
-        name: 'obsesja',
-        href: 'obsesja'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'Panoramed',
-        name: 'panoramed',
-        href: 'panoramed'
-    },
-    {
-        title: 'c05m05.com',
-        name: 'c05m05',
-        href: 'c05m05'
-    },
-    {
-        title: 'klubobsesja.pl',
-        name: 'obsesja',
-        href: 'obsesja'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'Panoramed',
-        name: 'panoramed',
-        href: 'panoramed'
-    },
-    {
-        title: 'c05m05.com',
-        name: 'c05m05',
-        href: 'c05m05'
-    },
-    {
-        title: 'klubobsesja.pl',
-        name: 'obsesja',
-        href: 'obsesja'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'Panoramed',
-        name: 'panoramed',
-        href: 'panoramed'
-    },
-    {
-        title: 'c05m05.com',
-        name: 'c05m05',
-        href: 'c05m05'
-    },
-    {
-        title: 'klubobsesja.pl',
-        name: 'obsesja',
-        href: 'obsesja'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'Panoramed',
-        name: 'panoramed',
-        href: 'panoramed'
-    },
-    {
-        title: 'c05m05.com',
-        name: 'c05m05',
-        href: 'c05m05'
-    },
-    {
-        title: 'klubobsesja.pl',
-        name: 'obsesja',
-        href: 'obsesja'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    },
     {
         title: 'Panoramed',
         name: 'panoramed',
@@ -219,10 +80,15 @@ class PortfolioThumb extends Component {
         return (
             <div className="portfolio-thumb" ref={elm => this.elm = elm}>
                 <div className="thumb-wrapper">
-                    <img src={`images/portfolio/${name}/cover.jpg`} alt={title} />
-                    <div className={`thumb-description ${dir}`}>
-                        {title}
-                    </div>
+                    <Link to={`/portfolio/${href}`} >
+                        <img src={`images/portfolio/${name}/cover.jpg`} alt={title} />
+                        <div className={`thumb-description ${dir}`}>
+                            <i className="material-icons">add</i>
+                            <span className="title">
+                                {title}
+                            </span>
+                        </div>
+                    </Link>
                 </div>
             </div>
         );
@@ -234,7 +100,7 @@ const Portfolio = () => {
         <div className="container">
             <h3 className="text-align-center">
                 <span className="hand-written white">
-                    Things which has been done
+                    Things what's been done
                 </span>
             </h3>
             <div className="portfolio">

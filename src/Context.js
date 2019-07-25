@@ -6,6 +6,7 @@ class Context extends Component {
     state = {
         activeNav: 'start',
         navigationIsOpened: false,
+        drawerIsOpened: false,
         sectionsData: []
     };
 
@@ -17,6 +18,13 @@ class Context extends Component {
                     this.setState(s => {
                         return {
                             navigationIsOpened: !s.navigationIsOpened
+                        }
+                    })
+                },
+                toggleDrawer: () => {
+                    this.setState(s => {
+                        return {
+                            drawerIsOpened: !s.drawerIsOpened
                         }
                     })
                 },

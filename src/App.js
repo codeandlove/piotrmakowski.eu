@@ -13,13 +13,16 @@ import Start from './contents/Start/Start';
 import Timeline from './contents/Timeline/Timeline';
 import Bio from './contents/Bio/Bio';
 import Portfolio from './contents/Portfolio/Portfolio';
+import Drawer from './containers/Drawer/Drawer';
 
 const App = props => {
 
+    let appClasses = `${props.navigationIsOpened ? 'nav-is-opened' : 'nav-is-closed'} ${props.drawerIsOpened ? 'drawer-is-opened' : 'drawer-is-closed'}`
+
     return (
-        <div className={`app ${props.navigationIsOpened ? 'nav-is-opened' : 'nav-is-closed'}`}>
+        <div className={`app ${appClasses}`}>
             <Header />
-            <main className={`wrapper ${props.navigationIsOpened ? 'nav-is-opened' : 'nav-is-closed'}`}>
+            <main className={`wrapper ${appClasses}`}>
                 <div className="sections">
                     <Section name="start" content={<Start />} />
                     <Section name="timeline" classes="white-bg" content={<Timeline />} />
@@ -44,6 +47,9 @@ const App = props => {
                         <Background referTo={["contact"]} image="./images/backgrounds/section_03.jpg" add="./images/backgrounds/section_03_add.png"/>
                         <Background referTo={["contact"]} image="./images/backgrounds/section_04.jpg" add="./images/backgrounds/section_04_add.png"/>
                     </MouseMovement>
+                </div>
+                <div className="drawer-wrapper">
+                    <Drawer />
                 </div>
             </main>
         </div>

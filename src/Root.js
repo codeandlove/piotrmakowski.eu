@@ -2,14 +2,18 @@ import React from 'react';
 
 import Context from './Context';
 
+import { BrowserRouter } from 'react-router-dom';
+
 import App from './App';
 
 const Root = () => {
 
     return (
-        <Context>
-            <App />
-        </Context>
+        <BrowserRouter>
+            <Context>
+                <App />
+            </Context>
+        </BrowserRouter>
     );
 };
 

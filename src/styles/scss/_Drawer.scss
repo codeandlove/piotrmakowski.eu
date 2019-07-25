@@ -1,0 +1,15 @@
+.drawer {
+    background-color: $cta-primary;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: translateX(100%);
+    z-index: 9;
+    transition: all .5s ease 0s;
+
+    &.drawer-is-opened {
+        transform: translateX(0);
+    }
+}

@@ -6,7 +6,7 @@
     "gsap": "^2.0.2",
     "include-media": "^1.4.9",
     "react": "^16.4.1",
-    "react-dom": "^16.4.1",
+    "react-dom": "^16.14.0",
     "react-perf-devtool": "^3.0.8",
     "react-render-html": "^0.6.0",
     "react-router-dom": "^4.3.1",

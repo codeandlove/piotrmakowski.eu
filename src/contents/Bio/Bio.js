@@ -44,7 +44,7 @@ const Bio = (props) => {
 
                     <Panel header={`Frontend Developer`}>
                         <p>
-                            Over 10 yrs of practice in Java Script strating with pure JS through jQuery and Prototype libraries ending with React framework.
+                            Over 10 yrs of practice in Java Script starting with pure JS through jQuery and Prototype libraries ending with React framework.
                         </p>
                         <p>
                             Over 10 yrs of playing with HTML, CSS and other stacks necessary to create dynamic Websites and Apps.

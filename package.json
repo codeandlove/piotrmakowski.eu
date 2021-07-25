@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@u-wave/react-vimeo": "^0.9.5",
-    "gsap": "^3.7.1",
+    "gsap": "^3.6.0",
     "include-media": "^1.4.9",
     "react": "^16.4.1",
     "react-dom": "^16.14.0",

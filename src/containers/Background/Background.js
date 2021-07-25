@@ -25,13 +25,13 @@ const Background = props => {
     }
 
     const style = {
-        backgroundImage: `url(${image})`,
+        backgroundImage: `url(${process.env.PUBLIC_URL}${image})`,
         height: height
     };
 
     const styleAdd = {
-        backgroundImage: `url(${add})`,
-        backgroundPosition: `${50 + mouse.x}% ${50 + mouse.y}%`
+        backgroundImage: `url(${process.env.PUBLIC_URL}${add})`,
+        backgroundPosition: !!mouse ? `${50 + mouse.x}% ${50 + mouse.y}%` : `cover`
     };
 
     return (

@@ -34,12 +34,6 @@ const Navigation = props => {
             class: `${(props.activeNav === 'portfolio') ? 'active': ''}`
         },
         {
-            name: 'future',
-            url: 'future',
-            label: 'Future',
-            class: `${(props.activeNav === 'future') ? 'active': ''}`
-        },
-        {
             name: 'contact',
             url: 'contact',
             label: 'Contact',

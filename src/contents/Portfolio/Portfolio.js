@@ -1,28 +1,8 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
-
-const data = [
-    {
-        title: 'Panoramed',
-        name: 'panoramed',
-        href: 'panoramed'
-    },
-    {
-        title: 'c05m05.com',
-        name: 'c05m05',
-        href: 'c05m05'
-    },
-    {
-        title: 'klubobsesja.pl',
-        name: 'obsesja',
-        href: 'obsesja'
-    },
-    {
-        title: 'najatkach.pl',
-        name: 'najatkach',
-        href: 'najatkach'
-    }
-];
+import {withContext} from "../../Context";
+import {Controller, Scene} from "react-scrollmagic";
+import {Tween} from "react-gsap";
 
 class PortfolioThumb extends Component {
     constructor(props) {
@@ -81,7 +61,7 @@ class PortfolioThumb extends Component {
             <div className="portfolio-thumb" ref={elm => this.elm = elm}>
                 <div className="thumb-wrapper">
                     <Link to={`/portfolio/${href}`} >
-                        <img src={`images/portfolio/${name}/cover.jpg`} alt={title} />
+                        <img src={`${process.env.PUBLIC_URL}/images/portfolio/${name}/cover.jpg`} alt={title} />
                         <div className={`thumb-description ${dir}`}>
                             <i className="material-icons">add</i>
                             <span className="title">
@@ -95,23 +75,55 @@ class PortfolioThumb extends Component {
     }
 }
 
-const Portfolio = () => {
+const Portfolio = (props) => {
+    const {portfolio} = props;
+
     return (
-        <div className="container">
+        <div className="container with-bg">
             <h3 className="text-align-center">
                 <span className="hand-written white">
-                    Things what's been done
+                    Freelance projects (2010-16)
                 </span>
             </h3>
             <div className="portfolio">
-                {
-                    data.map((props, key) => {
-                        return <PortfolioThumb {...props} key={`thumb-item-${key}`} />
-                    })
-                }
+                <Controller>
+                    {
+                        portfolio.map((props, key) => {
+                            return (
+                                <Scene
+                                    duration={300}
+                                    offset={-300 + ((key + 1) * 5)}
+                                    key={`scene-thumb-item-${key}`}
+                                >
+                                    <Tween
+                                        from={{
+                                            css: {
+                                                y: "50px",
+                                                opacity: 0
+                                            },
+                                            ease: 'Power4.easeOut',
+                                        }}
+                                        to={{
+                                            css: {
+                                                y: "0px",
+                                                opacity: 1
+                                            },
+                                            ease: 'Power4.easeOut',
+                                        }}
+                                        paused
+                                    >
+                                        <div className="portfolio-thumb-wrapper">
+                                            <PortfolioThumb {...props} key={`thumb-item-${key}`} />
+                                        </div>
+                                    </Tween>
+                                </Scene>
+                            )
+                        })
+                    }
+                </Controller>
             </div>
         </div>
     )
 };
 
-export default Portfolio;
+export default withContext(Portfolio);

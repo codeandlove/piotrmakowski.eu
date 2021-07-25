@@ -9,6 +9,7 @@ body {
   text-rendering: optimizelegibility;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  touch-action: none;
 }
 
 * {
@@ -99,7 +100,20 @@ ul {
 }
 
 .hand-written {
-  font-family: 'Kalam', cursive;
+  font-family: 'Pacifico', cursive;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.ampersand {
+  background: url('/images/ampersand.png') no-repeat scroll center center transparent;
+  background-size: contain;
+  width: 60px;
+  height: 60px;
+  font-size: 0;
+  color: transparent;
+  display: block;
+  margin: 0 20px;
 }
 
 .white {

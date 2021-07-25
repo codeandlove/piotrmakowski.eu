@@ -1,0 +1,26 @@
+.viewer {
+  padding-top: 70px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  .viewer-video-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+}
+
+.slider {
+  margin: 0 auto;
+
+  div {
+    background: transparent;
+  }
+
+  @include media('>=tablet') {
+    display: flex;
+    justify-content: center;
+  }
+}

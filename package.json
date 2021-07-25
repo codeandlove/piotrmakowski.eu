@@ -3,22 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "gsap": "^2.0.2",
+    "@react-hook/media-query": "^1.1.1",
+    "@u-wave/react-vimeo": "^0.9.5",
+    "gsap": "^3.7.1",
     "include-media": "^1.4.9",
     "react": "^16.4.1",
     "react-dom": "^16.14.0",
+    "react-gallery-carousel": "^0.2.3",
+    "react-gsap": "^3.2.1",
+    "react-media": "^1.10.0",
     "react-perf-devtool": "^3.0.8",
     "react-render-html": "^0.6.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
+    "react-scrollmagic": "^2.3.0",
     "react-waypoint": "^8.0.3",
-    "reset-css": "^4.0.1",
-    "scrollmagic": "^2.0.5"
+    "reset-css": "^4.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "build": "react-scripts build",
+    "http": "http-server ./build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

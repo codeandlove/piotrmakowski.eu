@@ -1,4 +1,5 @@
 .panel {
+  font-size: 16px;
   background-color: rgba(white, .8);
   width: 100%;
   margin-bottom: 15px;
@@ -8,6 +9,8 @@
     padding: 15px;
     color: $cta-primary;
     border-bottom: 1px dashed rgba($cta-primary, .25);
+    font-size: 1.6em;
+    font-weight: bold;
 
     &.no-border {
       border: 0;
@@ -27,15 +30,15 @@
 
     .panel-actions {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       justify-content: space-between;
 
       @include media('<mobile') {
         flex-flow: column nowrap;
+      }
 
-        > * {
-          margin: 10px 0;
-        }
+      > * {
+        margin: 10px 0;
       }
 
       &.justify-right {
@@ -57,7 +60,7 @@
   }
 
   &.shadowed {
-    box-shadow: 0 3px 0px rgba(black, .25);
+    box-shadow: 0 3px 0 rgba(black, .25);
   }
 
   &.full-bg {

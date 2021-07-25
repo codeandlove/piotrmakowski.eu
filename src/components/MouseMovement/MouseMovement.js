@@ -5,6 +5,7 @@ class MouseMovement extends Component {
         super(props);
 
         this.state = {
+            isMobile: false,
             movement: {
                 x: 0,
                 y: 0
@@ -15,11 +16,20 @@ class MouseMovement extends Component {
     }
 
     componentDidMount() {
+        this.checkIsMobile();
+        window.addEventListener('resize', this.checkIsMobile, false);
         document.addEventListener('mousemove', this.onMouseMove, true);
     }
 
     componentWillUnmount() {
+        window.removeEventListener('resize', this.checkIsMobile, false);
         document.removeEventListener('mousemove', this.onMouseMove, true);
+    }
+
+    checkIsMobile = () => {
+        this.setState({
+            isMobile: window.innerWidth < 768
+        });
     }
 
     onMouseMove = e => {
@@ -32,8 +42,8 @@ class MouseMovement extends Component {
         let y = e.clientY - (window.innerHeight / 2);
 
         const movement = {
-            x: (x/window.innerWidth) * (factorX || dFactorX),
-            y: (y/window.innerHeight) * (factorY || dFactorY)
+            x: (x/window.innerWidth) * -(factorX || dFactorX),
+            y: (y/window.innerHeight) * -(factorY || dFactorY)
         };
 
         this.setState({
@@ -42,8 +52,10 @@ class MouseMovement extends Component {
     };
 
     render() {
-        const {movement: {x, y}} = this.state;
+        const {movement: {x, y}, isMobile} = this.state;
         const {children} = this.props;
+
+        if(isMobile) return children;
 
         if(children.length > 0) {
             return children.map((child, key) => {
@@ -51,7 +63,7 @@ class MouseMovement extends Component {
             });
         }
 
-        return React.cloneElement(children, { mouse: {x: x, y: y}});
+        return React.cloneElement(children, {mouse: {x: x, y: y}});
 
     }
 }

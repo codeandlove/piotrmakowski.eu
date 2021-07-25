@@ -3,9 +3,10 @@
     position: absolute;
     padding: 25px;
     right: 0;
+    display: none;
 
-    @include media('>tablet') {
-      display: none;
+    @include media('<tablet') {
+      display: block;
     }
   }
 
@@ -17,7 +18,7 @@
     flex-flow: row nowrap;
     align-items: center;
 
-    @include media('<=tablet') {
+    @include media('<tablet') {
       flex-flow: column nowrap;
       align-items: flex-end;
       justify-content: center;
@@ -35,7 +36,7 @@
       line-height: inherit;
       margin: 0;
 
-      @include media('<=tablet') {
+      @include media('<tablet') {
         height: 50px;
         line-height: normal;
         width: 100%;
@@ -46,7 +47,9 @@
         text-transform: uppercase;
         font-weight: 300;
         height: inherit;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         color: white;
         padding: 0 15px;
         text-decoration: none;
@@ -83,7 +86,7 @@
   }
 
   &.nav-is-closed {
-    @include media('<=tablet') {
+    @include media('<tablet') {
       > ul {
         transform: translateX(100%);
       }
@@ -91,7 +94,7 @@
   }
 
   &.nav-is-open {
-    @include media('<=tablet') {
+    @include media('<tablet') {
       > ul {
         transform: translateX(0);
       }

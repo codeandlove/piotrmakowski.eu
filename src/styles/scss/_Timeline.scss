@@ -124,6 +124,18 @@
       }
     }
 
+    .timeline-content-wrapper,
+    .timeline-date-wrapper {
+      padding: 0 60px;
+      flex: 1 0 50%;
+      box-sizing: border-box;
+
+      @include media('<tablet') {
+        padding: 0;
+        flex: none;
+      }
+    }
+
     .timeline-icon {
       position: absolute;
       left: 50%;
@@ -137,15 +149,7 @@
 
     .timeline-content,
     .timeline-date {
-      padding: 0 60px;
-      flex: 1 0 50%;
       display: flex;
-      box-sizing: border-box;
-
-      @include media('<tablet') {
-        padding: 0;
-        flex: none;
-      }
     }
   }
 

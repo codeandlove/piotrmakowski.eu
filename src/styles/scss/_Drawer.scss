@@ -3,6 +3,8 @@
     position: fixed;
     width: 100%;
     height: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
     top: 0;
     left: 0;
     transform: translateX(100%);
@@ -11,5 +13,31 @@
 
     &.drawer-is-opened {
         transform: translateX(0);
+    }
+
+    .drawer-header {
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        left: 0;
+        right: 0;
+
+        h2 {
+            font-size: 18px;
+            line-height: 40px;
+            color: $color-white;
+            margin: 15px;
+        }
+
+        .close {
+            margin: 15px;
+        }
+    }
+}
+
+body {
+    &.drawer-is-opened {
+        overflow: hidden;
     }
 }

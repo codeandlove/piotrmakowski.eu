@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {withContext} from "../../Context";
 import { withRouter } from 'react-router';
 import { Route, Switch } from 'react-router-dom';
@@ -9,14 +9,20 @@ const Drawer = props => {
     const {toggleDrawer, drawerIsOpened} = props;
 
     const handleClose = () => {
-        toggleDrawer();
-
+        toggleDrawer(false);
         props.history.push('/');
     }
 
     return (
         <div className={`drawer ${(drawerIsOpened) ? 'drawer-is-opened':'drawer-is-closed'}`}>
-            <button onClick={handleClose}>Close</button>
+            <div className="drawer-header">
+                <h2>
+                    {props.portfolioActiveItem.title}
+                </h2>
+                <button  className="close" onClick={handleClose}>
+                    <i className="material-icons">close</i>
+                </button>
+            </div>
             <Switch>
                 <Route exact path='/' component={null}/>
                 <Route path='/portfolio/:href' component={Viewer} />

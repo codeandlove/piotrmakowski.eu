@@ -27,4 +27,15 @@ button:not(.burger) {
     font-size: inherit;
     vertical-align: middle;
   }
+
+  &.close {
+    width: 40px;
+    min-width: auto;
+    padding: 0 4px;
+    height: 40px;
+    box-shadow: none;
+    border-radius: 50px;
+    font-size: 24px;
+    line-height: 1;
+  }
 }

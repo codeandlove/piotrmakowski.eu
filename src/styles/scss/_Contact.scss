@@ -1,0 +1,15 @@
+.contact {
+  display: flex;
+  align-items: center;
+
+  .contact-icon {
+    margin-right: 15px;
+  }
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

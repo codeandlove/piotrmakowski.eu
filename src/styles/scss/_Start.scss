@@ -1,0 +1,38 @@
+section {
+  &.section-start {
+    .custom-typo {
+      font-size: 16px;
+
+      .ampersand {
+        clear: both;
+        margin: 0 auto;
+
+        @include media('>=tablet') {
+          float: left;
+          clear: left;
+        }
+      }
+
+      .hand-written {
+        font-size: 2.3em;
+        float: left;
+
+        @include media('<desktop') {
+          font-size: 1.6em;
+        }
+
+        @include media('<tablet') {
+          width: 100%;
+          font-size: 2em;
+          text-align: center;
+          line-height: 2em;
+        }
+
+        @include media('<mobile') {
+          font-size: 1.8em;
+          line-height: 2em;
+        }
+      }
+    }
+  }
+}

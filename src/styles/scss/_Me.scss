@@ -16,9 +16,10 @@
     height: 100%;
     background-repeat: no-repeat;
     background-position: center bottom;
+    background-size: auto calc(100% - 40px);
     transition: all .5s ease 0s;
 
-    @include media('<=desktop') {
+    @include media('<desktop') {
       background-size: auto 80%;
     }
 

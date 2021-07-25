@@ -11,12 +11,17 @@
       cursor: pointer;
       position: relative;
       background-color: white;
-      width: 160px;
-      height: 160px;
+      width: 70px;
+      height: 70px;
       box-shadow: 0 3px 0 rgba(black, .25);
       border: 1px solid white;
       box-sizing: border-box;
       overflow: hidden;
+
+      @include media('>=mobile') {
+        width: 160px;
+        height: 160px;
+      }
 
       img {
         max-width: 100%;

@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: flex-start;
 
-  @include media('<=tablet') {
+  @include media('<tablet') {
     flex-flow: column nowrap;
     align-items: center;
   }
@@ -14,20 +14,52 @@
     display: flex;
     flex-flow: column nowrap;
 
-    @include media('>tablet') {
+    @include media('>=tablet') {
       margin-right: 15px;
+      max-width: 40%;
+
+      > div {
+        width: 100%;
+      }
 
       &:last-of-type {
         margin-right: 0;
       }
     }
 
-    &.align-left {
-      align-items: flex-start;
+    @include media('<tablet') {
+      width: 100%;
+      align-items: center;
+
+      &.column-introduction {
+        order: 2;
+      }
+
+      &.column-expertise {
+        order: 1;
+      }
     }
 
-    &.align-right {
-      align-items: flex-end;
+    @include media('>=tablet') {
+      &.align-left {
+        align-items: flex-start;
+
+        .panel-wrapper {
+          display: flex;
+          flex-flow: column wrap;
+          align-items: flex-start;
+        }
+      }
+
+      &.align-right {
+        align-items: flex-end;
+
+        .panel-wrapper {
+          display: flex;
+          flex-flow: column wrap;
+          align-items: flex-end;
+        }
+      }
     }
   }
 }

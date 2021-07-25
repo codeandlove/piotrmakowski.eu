@@ -4,4 +4,8 @@
   max-width: 1400px;
   margin: 0 auto;
   box-sizing: border-box;
+
+  &.with-bg {
+    background-color: rgba(#2d2839, .5);
+  }
 }

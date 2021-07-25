@@ -1,6 +1,6 @@
 @import '../../../node_modules/reset-css/sass/_reset.scss';
 
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Kalam|Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Pacifico&family=Material+Icons&display=swap');
 
 @import '_Variables';
 
@@ -12,6 +12,7 @@
 
 @import '_Root';
 @import '_App';
+@import '_Start';
 @import '_Header';
 @import '_Panel';
 @import '_Section';
@@ -24,6 +25,12 @@
 @import '_Burger';
 @import '_Portfolio';
 @import '_Drawer';
+@import '_Viewer';
+@import '_Contact';
+
+html {
+  scroll-behavior: smooth;
+}
 
 body, html {
   width: 100%;
@@ -38,6 +45,7 @@ body, html {
   position: relative;
   width: 100%;
   z-index: 2;
+  overflow: hidden;
 }
 
 .backgrounds {
@@ -45,6 +53,16 @@ body, html {
   left: 0;
   top: 0;
   right: 0;
+  display: flex;
+  flex-flow: column nowrap;
+
+  @include media('<tablet') {
+    background-image: url('/images/backgrounds/mobile.jpg');
+    background-size: cover;
+    bottom: 0;
+    position: fixed;
+    transition: all .5s ease 0s;
+  }
 }
 
 .me {

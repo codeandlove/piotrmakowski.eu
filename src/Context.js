@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import data from './data/data.json';
 const AppContext = React.createContext();
 
 class Context extends Component {
@@ -7,7 +7,9 @@ class Context extends Component {
         activeNav: 'start',
         navigationIsOpened: false,
         drawerIsOpened: false,
-        sectionsData: []
+        sectionsData: [],
+        portfolio: data,
+        portfolioActiveItem: []
     };
 
     render() {
@@ -21,23 +23,22 @@ class Context extends Component {
                         }
                     })
                 },
-                toggleDrawer: () => {
+                toggleDrawer: (val) => {
                     this.setState(s => {
                         return {
-                            drawerIsOpened: !s.drawerIsOpened
+                            drawerIsOpened: !!val ? val : !s.drawerIsOpened
                         }
                     })
                 },
                 updateNavItem: name => {
                     this.setState({
-                        activeNav: name
+                        activeNav: name,
+                        navigationIsOpened: false
                     })
                 },
                 updateSectionsData: data => {
                     this.setState(s => {
-
                         let index = null;
-
                         s.sectionsData.forEach((sectionItem, i) => {
                             if(sectionItem.name === data.name) {
                                 index = i;
@@ -53,7 +54,14 @@ class Context extends Component {
                                 sectionsData: [...s.sectionsData, data]
                             }
                         }
+                    });
+                },
+                setActivePortfolioItem: data => {
+                    const {match: {params: {href} }, portfolio} = data;
+                    const result = portfolio.filter(item => item.href === href)[0];
 
+                    this.setState({
+                        portfolioActiveItem: result || []
                     })
                 }
             }}>

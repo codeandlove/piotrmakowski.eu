@@ -4,14 +4,20 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: 10% 0;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 
   &.white-bg {
-    background-color: rgba(white, .8);
+    background-color: rgba(lightgray, .8);
   }
 
   .section-wrapper {
     width: 100%;
+    padding: 50px 0;
+
+    @include media('>=tablet') {
+      padding: 100px 0;
+    }
   }
 }

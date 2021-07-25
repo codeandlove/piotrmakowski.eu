@@ -60,7 +60,7 @@ class PortfolioThumb extends Component {
         return (
             <div className="portfolio-thumb" ref={elm => this.elm = elm}>
                 <div className="thumb-wrapper">
-                    <Link to={`/portfolio/${href}`} >
+                    <Link to={`/${href}`} >
                         <img src={`${process.env.PUBLIC_URL}/images/portfolio/${name}/cover.jpg`} alt={title} />
                         <div className={`thumb-description ${dir}`}>
                             <i className="material-icons">add</i>

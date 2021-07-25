@@ -3,8 +3,6 @@ import {withContext} from "../../Context";
 import Vimeo from "@u-wave/react-vimeo";
 import Slider from "../Slider/Slider";
 
-const url = process.env.PUBLIC_URL + '/images/portfolio/';
-
 class Viewer extends Component {
 
     componentDidMount() {
@@ -18,8 +16,8 @@ class Viewer extends Component {
     }
 
     mapImages = () => {
-        const {match: {params: {href} }, portfolioActiveItem} = this.props;
-        return [...Array(portfolioActiveItem.imagesAmount)].map((item, key) => { return {src: `${url}${href}/${key}.jpg`}});
+        const {portfolioActiveItem: {name, imagesAmount}} = this.props;
+        return [...Array(imagesAmount)].map((item, key) => { return {src: `${process.env.PUBLIC_URL}/images/portfolio/${name}/${key}.jpg`}});
     }
 
     render() {

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {withContext} from './Context';
-import {useMediaQuery} from '@react-hook/media-query';
+import useMediaQuery from 'react-hook-media-query';
 
 import Header from './containers/Header/Header';
 import Section from './containers/Section/Section';

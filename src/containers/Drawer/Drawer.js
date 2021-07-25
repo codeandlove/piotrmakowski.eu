@@ -25,7 +25,7 @@ const Drawer = props => {
             </div>
             <Switch>
                 <Route exact path='/' component={null}/>
-                <Route path='/portfolio/:href' component={Viewer} />
+                <Route path='/:href' component={Viewer} />
             </Switch>
         </div>
     )

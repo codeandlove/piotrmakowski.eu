@@ -90,7 +90,7 @@ const data = [
         content: (
             <ul>
                 <li>Certified Magento 2 Frontend Developer</li>
-                <li>Support in the development of company</li>
+                <li>Tech support in the development teams</li>
                 <li>Recruitment processes supervisor</li>
                 <li>Mentor in the internship programs</li>
             </ul>

@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@u-wave/react-vimeo": "^0.9.5",
+    "ftp-deploy": "^2.4.1",
     "gsap": "^3.7.1",
     "include-media": "^1.4.9",
     "react": "^16.4.1",
@@ -24,6 +25,7 @@
     "start": "react-scripts start",
     "sass": "sass --watch src/styles/scss:src/styles/css",
     "build": "react-scripts build",
+    "deploy": "node deploy",
     "http": "http-server ./build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
@@ -34,5 +36,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "ftp-deploy-cli": "^1.0.2"
+  }
 }

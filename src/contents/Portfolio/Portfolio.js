@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import {withContext} from "../../Context";
 import {Controller, Scene} from "react-scrollmagic";
 import {Tween} from "react-gsap";
+import LazyLoad from 'react-lazyload';
 
 class PortfolioThumb extends Component {
     constructor(props) {
@@ -61,7 +62,10 @@ class PortfolioThumb extends Component {
             <div className="portfolio-thumb" ref={elm => this.elm = elm}>
                 <div className="thumb-wrapper">
                     <Link to={`/${href}`} >
-                        <img src={`${process.env.PUBLIC_URL}/images/portfolio/${name}/cover.jpg`} alt={title} />
+                        <LazyLoad height={158}>
+                            <img src={`${process.env.PUBLIC_URL}/images/portfolio/${name}/cover.jpg`} alt={title}
+                                 height="158" width="158"/>
+                        </LazyLoad>
                         <div className={`thumb-description ${dir}`}>
                             <i className="material-icons">add</i>
                             <span className="title">

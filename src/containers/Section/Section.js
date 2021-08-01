@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Waypoint from 'react-waypoint';
-
-import { withContext } from './../../Context';
+import { withContext } from '../../Context';
 
 class Section extends Component {
     constructor(props) {

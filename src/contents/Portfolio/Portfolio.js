@@ -31,7 +31,7 @@ class PortfolioThumb extends Component {
 
         this.setState(s => {
 
-            let tmp = s.dir;
+            let tmp;
 
             switch(getDirection(event, this.elm)) {
                 case 0:
@@ -46,6 +46,8 @@ class PortfolioThumb extends Component {
                 case 3:
                     tmp = 'from-left';
                     break;
+                default:
+                    tmp = s.dir
             }
 
             return {

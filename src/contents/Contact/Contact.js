@@ -1,7 +1,6 @@
 import React from 'react';
 
 import Panel from './../../components/Panel/Panel';
-import AnchorLink from './../../components/Anchor/Anchor';
 import {Controller, Scene} from "react-scrollmagic";
 import {Tween} from "react-gsap";
 
@@ -41,7 +40,7 @@ const Contact = () => {
                                                 <img src="/images/contact_email.png" alt="Email" />
                                             </div>
                                             <div className="contact-data">
-                                                <a href="mailto:hello@piotrmakowski.eu" target="_blank"><strong>hello@piotrmakowski.eu</strong></a>
+                                                <a href="mailto:hello@piotrmakowski.eu" rel="noopener noreferrer" target="_blank"><strong>hello@piotrmakowski.eu</strong></a>
                                             </div>
                                         </div>
                                     </Panel>
@@ -77,32 +76,32 @@ const Contact = () => {
                                     <Panel header={`Social Media`}>
                                         <div className="social-icons">
                                             <div className="social-icon">
-                                                <a className="tw" href="https://www.github.com/codeandlove" title="Find Piotr Makowski on Github.com" target="_blank">
+                                                <a className="tw" href="https://www.github.com/codeandlove" rel="noopener noreferrer" title="Find Piotr Makowski on Github.com" target="_blank">
                                                     <img src="/images/gh.png" alt="Github.com"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
-                                                <a className="tw" href="https://www.Linkedin.com/in/piotr-makowski-ninja/" title="Find Piotr Makowski on LinkedIn" target="_blank">
+                                                <a className="tw" href="https://www.Linkedin.com/in/piotr-makowski-ninja" rel="noopener noreferrer" title="Find Piotr Makowski on LinkedIn" target="_blank">
                                                     <img src="/images/in.png" alt="LinkedIn"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
-                                                <a className="fb" href="https://www.facebook.com/codeandlove" title="Like Codeandlove.com on Facebook.com" target="_blank">
+                                                <a className="fb" href="https://www.facebook.com/codeandlove" rel="noopener noreferrer" title="Like Codeandlove.com on Facebook.com" target="_blank">
                                                     <img src="/images/fb.png" alt="Facebook.com"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
-                                                <a className="tw" href="https://www.twitter.com/codeandlove" title="Like Codeandlove.com on Twitter.com" target="_blank">
+                                                <a className="tw" href="https://www.twitter.com/codeandlove" rel="noopener noreferrer" title="Like Codeandlove.com on Twitter.com" target="_blank">
                                                     <img src="/images/tw.png" alt="Twitter.com"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
-                                                <a className="tw" href="https://www.behance.net/codeandlove" title="Like Codeandlove.com on Behance.net" target="_blank">
+                                                <a className="tw" href="https://www.behance.net/codeandlove" rel="noopener noreferrer" title="Like Codeandlove.com on Behance.net" target="_blank">
                                                     <img src="/images/be.png" alt="Behance.net"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
-                                                <a className="tw" href="https://www.vimeo.com/codeandlove" title="Like Codeandlove.com on Vimeo.com" target="_blank">
+                                                <a className="tw" href="https://www.vimeo.com/codeandlove" rel="noopener noreferrer" title="Like Codeandlove.com on Vimeo.com" target="_blank">
                                                     <img src="/images/vi.png" alt="Vimeo.com"/>
                                                 </a>
                                             </div>

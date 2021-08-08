@@ -65,7 +65,7 @@ class Me extends Component {
     }
 
     render() {
-        const {persons, interval, movement, isMobile} = this.state;
+        const {persons, interval, movement} = this.state;
         const {mouse} = this.props;
 
         const style = !!mouse ? {

@@ -6,11 +6,7 @@ const Background = props => {
 
     //find refer component
     const referData = referTo.map(refName => {
-        return sectionsData.filter(item => {
-            if (item.name === refName) {
-                return item;
-            }
-        });
+        return sectionsData.filter(item => item.name === refName);
     });
 
     let height = window.innerHeight;

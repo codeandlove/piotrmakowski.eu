@@ -31,7 +31,6 @@ class Context extends Component {
                     })
                 },
                 updateNavItem: name => {
-                    console.log(name);
                     this.setState({
                         activeNav: name,
                         navigationIsOpened: false

@@ -5,15 +5,15 @@
   @if $way == left {
     width: 0;
     height: 0;
-    border-top: #{$size - $size/4} solid transparent;
+    border-top: #{$size - $size * .25} solid transparent;
     border-left: $size solid $color;
-    border-bottom: #{$size - $size/4} solid transparent;
+    border-bottom: #{$size - $size * .25} solid transparent;
   } @else {
     width: 0;
     height: 0;
-    border-top: #{$size - $size/4} solid transparent;
+    border-top: #{$size - $size * .25} solid transparent;
     border-right: $size solid $color;
-    border-bottom: #{$size - $size/4} solid transparent;
+    border-bottom: #{$size - $size * .25} solid transparent;
   }
 }
 

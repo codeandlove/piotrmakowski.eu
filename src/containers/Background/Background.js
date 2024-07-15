@@ -4,18 +4,21 @@ import {withContext} from "../../Context";
 const Background = props => {
     const {image, add, mouse, referTo, sectionsData} = props;
 
+    if(!sectionsData) return null;
+
     //find refer component
     const referData = referTo.map(refName => {
         return sectionsData.filter(item => item.name === refName);
     });
 
-    let height = window.innerHeight;
+    let height = window.outerHeight;
 
     if (referData[0].length) {
         height = 0;
         referData.forEach(item => {
             if (item.length) {
-                height += item[0].data.height;
+                const currentBoundingBox = item[0].current.getBoundingClientRect()
+                height += currentBoundingBox.height;
             }
         });
     }

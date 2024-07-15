@@ -28,6 +28,12 @@ const Navigation = props => {
             class: `${(props.activeNav === 'bio') ? 'active': ''}`
         },
         {
+            name: 'certificates',
+            url: 'certificates',
+            label: 'Certificates',
+            class: `${(props.activeNav === 'certificates') ? 'active': ''}`
+        },
+        {
             name: 'portfolio',
             url: 'portfolio',
             label: 'Portfolio',

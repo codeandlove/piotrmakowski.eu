@@ -11,6 +11,7 @@ import MouseMovement from './components/MouseMovement/MouseMovement';
 import Start from './contents/Start/Start';
 import Timeline from './contents/Timeline/Timeline';
 import Bio from './contents/Bio/Bio';
+import Certificates from './contents/Certificates/Certificates';
 import Portfolio from './contents/Portfolio/Portfolio';
 import Drawer from './containers/Drawer/Drawer';
 import Contact from "./contents/Contact/Contact";
@@ -28,6 +29,7 @@ const App = props => {
                     <Section name="start" content={<Start />} />
                     <Section name="timeline" classes="white-bg" content={<Timeline />} />
                     <Section name="bio" content={<Bio />} />
+                    <Section name="certificates" content={<Certificates />} />
                     <Section name="portfolio" content={<Portfolio />} />
                     <Section name="contact" content={<Contact />}/>
                 </div>
@@ -43,8 +45,8 @@ const App = props => {
                         <MouseMovement factorX={-30} factorY={-30}>
                             <Background referTo={["start", "timeline"]} image="/images/backgrounds/section_00.jpg" />
                             <Background referTo={["bio"]} image="/images/backgrounds/section_01.jpg" add="/images/backgrounds/section_01_add.png" />
+                            <Background referTo={["certificates"]} image="/images/backgrounds/section_03.jpg" add="/images/backgrounds/section_03_add.png"/>
                             <Background referTo={["portfolio"]} image="/images/backgrounds/section_02.jpg" add="/images/backgrounds/section_02_add.png"/>
-                            {/*<Background referTo={["contact"]} image="/images/backgrounds/section_03.jpg" add="/images/backgrounds/section_03_add.png"/>*/}
                             <Background referTo={["contact"]} image="/images/backgrounds/section_04.jpg" add="/images/backgrounds/section_04_add.png"/>
                         </MouseMovement>
                     )}

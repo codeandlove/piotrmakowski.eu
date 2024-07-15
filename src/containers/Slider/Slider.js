@@ -11,17 +11,17 @@ class Slider extends Component {
             <div className="slider">
                 <Carousel
                     images={data}
-                    hasThumbnails={false}
+                    hasThumbnails={true}
                     isMaximized={false}
                     hasSizeButton={false}
                     hasMediaButton={false}
                     hasIndexBoard={false}
-                    hasLeftButton={false}
-                    hasRightButton={false}
+                    hasLeftButton="centerLeft"
+                    hasRightButton="centerRight"
                     hasCaptionsAtMax='top'
                     hasDotButtonsAtMax='bottom'
                     hasThumbnailsAtMax={true}
-                    style={{ maxWidth: `1200px`}}
+                    style={{ maxWidth: `1200px`, height: `auto`}}
                 />
             </div>
         )

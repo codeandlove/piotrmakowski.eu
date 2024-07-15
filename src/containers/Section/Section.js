@@ -19,10 +19,10 @@ class Section extends Component {
 
     updateSectionData = () => {
         const {name} = this.props;
-
         this.props.updateSectionsData({
             name: name,
-            data: this.sectionRef.current.getBoundingClientRect()
+            data: this.sectionRef.current.getBoundingClientRect(),
+            current: this.sectionRef.current
         });
     }
 
@@ -36,7 +36,7 @@ class Section extends Component {
 
         return (
             <section id={name} ref={this.sectionRef} className={`section-${name} ${classes ? classes : ''}`}>
-                <Waypoint onEnter={this.onSectionEnter} scrollableAncestor={window}>
+                <Waypoint onEnter={this.onSectionEnter} scrollableAncestor={window} bottomOffset="10%">
                     <div className="section-wrapper">
                         {content}
                     </div>

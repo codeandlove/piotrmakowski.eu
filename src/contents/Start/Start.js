@@ -16,14 +16,14 @@ const Start = () => {
                         </span>
                     )}>
                         <p>
-                            Hi! Welcome on my creative Resume page.
+                            Hi! Welcome to my Reasume.
                         </p>
                         <p>
-                            I am <strong>Piotr Makowski</strong> and I would like to show you my work experience.
+                            I'm <strong>Piotr Makowski</strong>, and I would like to present my work experience.
                         </p>
                         <p>
-                            Few years ago i used to be a Graphic designer and Web Developer till i become a Frontend
-                            Software Engineer and currently a Tech-Leader.
+                            I have worked as a Graphic Designer and Web Developer. <br />
+                            For the past {(new Date().getUTCFullYear()) - (new Date('2015').getUTCFullYear())} years, I have been working as a Frontend Software Engineer, and I am currently a Team Leader.
                         </p>
                     </Panel>
                     <Panel classes="no-bg" header={`Portfolio & Resume`}
@@ -37,7 +37,7 @@ const Start = () => {
                            ]}
                     >
                         <p>
-                            Please, take a look at my Resume and Portfolio available to download in PDF files.
+                            Please take a look at my résumé and portfolio, available for download in PDF format.
                         </p>
                     </Panel>
                 </div>
@@ -46,11 +46,11 @@ const Start = () => {
                         header={(
                             <span className="custom-typo">
                                 <span className="hand-written">
-                                    Frontend Tech-leader
+                                    Senior Frontend Developer
                                 </span>
                                 <span className="ampersand">&</span>
                                 <span className="hand-written">
-                                    Software Engineer
+                                    Team leader
                                 </span>
                             </span>
                         )}
@@ -61,26 +61,29 @@ const Start = () => {
                     <Panel classes="no-bg" header={`Work expertise`}
                            actions={(
                                <button onClick={() => window.location.hash = '#timeline'}>
-                                   <i className="material-icons">timeline</i> See my timeline below
+                                   <i className="material-icons">timeline</i> Go to timeline below
                                </button>
                            )}
                            actionsClasses="justify-right"
                     >
                         <ul>
                             <li>
-                                <AnchorLink url="http://codeandlove.com/" label="Codeandlove.com"/> CEO & Funder
+                                <AnchorLink href="http://codeandlove.com/" label="Codeandlove.com"/> digital agency founder
+                            </li>
+                            <li>
+                                Senior Frontend Developer / Full-stack 
                             </li>
                             <li>
                                 Magento 1 & 2 Certified Developer
                             </li>
                             <li>
-                                Senior Frontend Developer / JS Engineer
+                                AI & Next.js Certified Developer
                             </li>
                             <li>
-                                CS engineer with over 16 yrs experience
+                                Web engineer with over {(new Date().getUTCFullYear()) - (new Date('2004').getUTCFullYear())} yrs experience
                             </li>
                             <li>
-                                Teacher & inventor
+                                Trainer, entrepreneur & inventor
                             </li>
                         </ul>
                     </Panel>

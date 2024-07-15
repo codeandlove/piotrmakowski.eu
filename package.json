@@ -5,7 +5,7 @@
   "dependencies": {
     "@u-wave/react-vimeo": "^0.9.5",
     "compress-images": "^1.9.9",
-    "ftp-deploy": "^2.4.1",
+    "ftp-deploy": "2.4.7",
     "gsap": "^3.7.1",
     "include-media": "^1.4.9",
     "pngquant-bin": "^6.0.0",
@@ -25,9 +25,9 @@
     "reset-css": "^4.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "sass": "sass --watch src/styles/scss:src/styles/css",
-    "build": "react-scripts build && yarn run compress-images",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "sass": "node-sass --watch src/styles/scss/index.scss --output src/styles/css --output-style compressed",
+    "build": "react-scripts --openssl-legacy-provider build && yarn run compress-images",
     "compress-images": "rm -rf ./build/images/* && node compress-images",
     "deploy": "node deploy",
     "http": "http-server ./build",
@@ -42,6 +42,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "ftp-deploy-cli": "^1.0.2"
+    "ftp-deploy-cli": "^1.0.2",
+    "http-server": "^14.1.1",
+    "node-sass": "^9.0.0"
   }
 }

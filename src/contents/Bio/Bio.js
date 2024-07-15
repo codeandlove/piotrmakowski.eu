@@ -81,7 +81,7 @@ const Bio = () => {
                                     >
                                         <p>
                                             <em>
-                                                Graphic design of ecommerce store with practical implementation based on usability and availability aspects of W3C standards by using the eCommerce Magento Store.
+                                                Graphic design for an eCommerce store with practical implementation, based on usability and accessibility aspects of W3C standards, utilizing the Magento platform (2010).
                                             </em>
                                         </p>
                                     </Panel>
@@ -149,13 +149,13 @@ const Bio = () => {
                                 <div className="panel-wrapper">
                                     <Panel header={`Frontend Engineer`}>
                                         <p>
-                                            Over 16 years of practice in Java Script starting with pure JS through jQuery and Prototype libraries through to React library.
+                                            With nearly 20 years of experience in JavaScript, I have worked extensively with pure JS, as well as libraries such as jQuery, Prototype, and React.
                                         </p>
                                         <p>
-                                            Over 16 years of playing with HTML, CSS and other stacks necessary to create awesome Websites and Apps.
+                                            My two-decade-long journey also includes working with HTML, CSS, and various other technologies essential for creating outstanding websites and applications.
                                         </p>
                                         <p>
-                                            Over 10 years experience in eCommerce with Magento 1 & 2 platform and other 3rd kinds of CMS systems.
+                                            I have over 14 years of experience in eCommerce, specializing in the Magento 1 & 2 platforms, as well as other CMS systems.
                                         </p>
                                     </Panel>
                                 </div>
@@ -185,12 +185,12 @@ const Bio = () => {
                                 paused
                             >
                                 <div className="panel-wrapper">
-                                    <Panel header={`Designer & Teacher`}>
+                                    <Panel header={`Designer & Trainer`}>
                                         <p>
-                                            In the past mostly familiar with graphic, mobile games and UX/U-CD designs.
+                                            In the past, I was primarily familiar with graphic design, mobile games, and UX/UI design.
                                         </p>
                                         <p>
-                                            Today mostly focused on high quality code development, teaching and mentoring.
+                                            Today, I am mostly focused on developing high-quality code, teaching, and mentoring.
                                         </p>
                                     </Panel>
                                 </div>
@@ -222,7 +222,7 @@ const Bio = () => {
                                 <div className="panel-wrapper">
                                     <Panel header={`Codeandlove.com`}>
                                         <p>
-                                            CEO <AnchorLink url="http://codeandlove.com/" label="Codeandlove.com" /> creative agency based in Wroclaw in Poland.
+                                            CEO <AnchorLink href="http://codeandlove.com/" label="Codeandlove.com" /> digital agency based in Wroclaw in Poland.
                                         </p>
                                     </Panel>
                                 </div>

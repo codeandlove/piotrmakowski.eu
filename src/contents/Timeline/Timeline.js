@@ -9,7 +9,7 @@ const data = [
         year: '2004 - 2006',
         icon: 'agency',
         icon_alt: 'Freelance creative works',
-        title: 'Cooperation with local social portal for students <strong>dlaStudenta.pl</strong>',
+        title: 'Graphic Designer and Creator for the student portal dlaStudenta.pl',
         content: (
             <ul>
                 <li>Webdesign</li>
@@ -22,11 +22,11 @@ const data = [
         year: '2006 - 2007',
         icon: 'games',
         icon_alt: 'Games and apps',
-        title: 'Graphic designer and inventor in <strong>Qubic Games</strong> mobile game entertainment company',
+        title: 'Graphic Designer at Qubic Games Mobile Game Entertainment Company',
         content: (
             <ul>
-                <li>Mobile branding games and apps designer</li>
-                <li>Sprites and low-pixel art artist</li>
+                <li>Mobile Branding Games and Apps Designer</li>
+                <li>Sprites and Low-Pixel Art Artist</li>
             </ul>
         )
     },
@@ -34,11 +34,11 @@ const data = [
         year: '2007 - 2010',
         icon: 'games',
         icon_alt: 'Games and apps',
-        title: 'Games designer in <strong>XOFTO</strong> mobile game entertainment company',
+        title: 'Game Designer at XOFTO Mobile Game Entertainment Company',
         content: (
             <ul>
-                <li>Mobile branding games and apps designer</li>
-                <li>Sprites and low-pixel art artist</li>
+                <li>Mobile Branding Games and Apps Designer</li>
+                <li>Sprites and Low-Pixel Art Artist</li>
             </ul>
         )
     },
@@ -46,12 +46,12 @@ const data = [
         year: '2010 - 2011',
         icon: 'games',
         icon_alt: 'Games and apps',
-        title: 'Games designer in <strong>E-MUZYKA S.A.</strong> digital media company',
+        title: 'Game Designer at E-MUZYKA S.A. Digital Media Company',
         content: (
             <ul>
-                <li>Mobile branding games and apps designer</li>
-                <li>Co-founder of mobile games website</li>
-                <li>Team leader</li>
+                <li>Mobile Branding Games and Apps Designer</li>
+                <li>Co-founder of Mobile Games Website</li>
+                <li>Team Leader</li>
             </ul>
         )
     },
@@ -59,13 +59,13 @@ const data = [
         year: '2011 - 2014',
         icon: 'agency',
         icon_alt: 'Games and apps',
-        title: 'CEO <strong>Codeandlove.com</strong> creative agency, freelancer',
+        title: 'CEO of Codeandlove.com Digital Agency, Freelancer',
         content: (
             <ul>
-                <li>Web design &amp; web development</li>
-                <li>eCommerce design/development</li>
-                <li>Visual advertising, BTL, DTP &amp; CI</li>
-                <li>Graphic designer, motion and video designer</li>
+                <li>Web design & development</li>
+                <li>eCommerce design & development</li>
+                <li>Visual advertising, BTL, DTP & CI</li>
+                <li>Graphic design, motion graphics, and video design</li>  
             </ul>
         )
     },
@@ -73,12 +73,12 @@ const data = [
         year: '2014 - 2018',
         icon: 'agency',
         icon_alt: 'Frontend development',
-        title: 'Cooperation with <strong>Virtua LTD</strong> company, Senior Frontend Developer, Magento developer',
+        title: 'Virtua LTD, Senior Frontend Developer, Magento Developer',
         content: (
             <ul>
                 <li>Certified Magento 1 Frontend Developer</li>
                 <li>Designer and developer of client's eCommerce stores based on Magento</li>
-                <li>Designer and developer of apps based on modern Javascript frameworks (React/Vue/Angular)</li>
+                <li>Designer and developer of apps based on modern Javascript</li>
             </ul>
         )
     },
@@ -86,7 +86,7 @@ const data = [
         year: '2018 - 2021',
         icon: 'agency',
         icon_alt: 'Frontend development',
-        title: 'Cooperation with <strong>Virtua Codelab</strong> company, Frontend Technical Leader',
+        title: 'Virtua Codelab, Frontend Team Lead',
         content: (
             <ul>
                 <li>Certified Magento 2 Frontend Developer</li>
@@ -97,15 +97,29 @@ const data = [
         )
     },
     {
-        year: '2021 - ∞',
-        icon: 'personal',
-        icon_alt: 'Websites and apps',
-        title: 'Looking for new opportunities',
+        year: '2021 - 2024',
+        icon: 'agency',
+        icon_alt: 'Team Leader & Senior Frontend Developer',
+        title: 'Alpacode.com, Frontend Team Leader, Magento Developer',
         content: (
             <ul>
-                <li>Opened for new contracts and projects</li>
-                <li>Motivated to work</li>
-                <li>Competent and on time</li>
+                <li>Certified Magento 2 Frontend Developer</li>
+                <li>Technical support for development teams</li>
+                <li>Supervisor of recruitment processes</li>
+                <li>Mentor in internship programs</li>
+            </ul>
+        )
+    },
+    {
+        year: '2024 - ∞',
+        icon: 'personal',
+        icon_alt: 'Websites and apps',
+        title: 'Always prepared for new challenges!',
+        content: (
+            <ul>
+                <li>Open to new contracts and projects</li>
+                <li>Motivated to build development teams</li>
+                <li>Highly skilled in communication</li>
             </ul>
         )
     }
@@ -137,7 +151,7 @@ const TimelineBlock = props => {
                             paused
                         >
                             <div className={`timeline-icon icon-${props.icon}`}>
-                                <img src={`images/icons/${props.icon}_icon.svg`} alt={props.icon_alt} />
+                                <img loading="lazy" src={`images/icons/${props.icon}_icon.svg`} alt={props.icon_alt} />
                             </div>
                         </Tween>
                     </Scene>

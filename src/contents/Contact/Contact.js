@@ -77,32 +77,32 @@ const Contact = () => {
                                         <div className="social-icons">
                                             <div className="social-icon">
                                                 <a className="tw" href="https://www.github.com/codeandlove" rel="noopener noreferrer" title="Find Piotr Makowski on Github.com" target="_blank">
-                                                    <img src="/images/gh.png" alt="Github.com"/>
+                                                    <img loading="lazy" src="/images/gh.png" alt="Github.com"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
                                                 <a className="tw" href="https://www.Linkedin.com/in/piotr-makowski-ninja" rel="noopener noreferrer" title="Find Piotr Makowski on LinkedIn" target="_blank">
-                                                    <img src="/images/in.png" alt="LinkedIn"/>
+                                                    <img loading="lazy" src="/images/in.png" alt="LinkedIn"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
                                                 <a className="fb" href="https://www.facebook.com/codeandlove" rel="noopener noreferrer" title="Like Codeandlove.com on Facebook.com" target="_blank">
-                                                    <img src="/images/fb.png" alt="Facebook.com"/>
+                                                    <img loading="lazy" src="/images/fb.png" alt="Facebook.com"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
                                                 <a className="tw" href="https://www.twitter.com/codeandlove" rel="noopener noreferrer" title="Like Codeandlove.com on Twitter.com" target="_blank">
-                                                    <img src="/images/tw.png" alt="Twitter.com"/>
+                                                    <img loading="lazy" src="/images/tw.png" alt="Twitter.com"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
                                                 <a className="tw" href="https://www.behance.net/codeandlove" rel="noopener noreferrer" title="Like Codeandlove.com on Behance.net" target="_blank">
-                                                    <img src="/images/be.png" alt="Behance.net"/>
+                                                    <img loading="lazy" src="/images/be.png" alt="Behance.net"/>
                                                 </a>
                                             </div>
                                             <div className="social-icon">
                                                 <a className="tw" href="https://www.vimeo.com/codeandlove" rel="noopener noreferrer" title="Like Codeandlove.com on Vimeo.com" target="_blank">
-                                                    <img src="/images/vi.png" alt="Vimeo.com"/>
+                                                    <img loading="lazy" src="/images/vi.png" alt="Vimeo.com"/>
                                                 </a>
                                             </div>
                                         </div>
@@ -114,7 +114,7 @@ const Contact = () => {
                 </div>
             </Controller>
             <footer className="footer">
-                &copy; 2021 Piotrmakowski.eu + All rights reserved.
+                &copy; {new Date().getUTCFullYear()} Piotrmakowski.eu + All rights reserved.
             </footer>
         </div>
     )

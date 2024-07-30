@@ -1,5 +1,3 @@
-Personal protfolio website based on react.js
-
 ### Piotrmakowski.eu
 
 [Piotrmakowski.eu](https://piotrmakowski.eu) is a purely React-based personal portfolio website. I maintained this project from 2015 to this day by refreshing sometimes informations about my current work acheivements and status. Project is a SPA page which react-context as main state holder.
